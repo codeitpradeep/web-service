@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<title>Stitch Design</title>
+<link href="data:image/x-icon;base64," rel="icon" type="image/x-icon"/>
+<link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
+<link as="style" href="https://fonts.googleapis.com/css2?display=swap&amp;family=Manrope%3Awght%40400%3B500%3B700%3B800&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900" onload="this.rel='stylesheet'" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<style type="text/tailwindcss">
+      :root {
+        --primary-color: #ec5413;
+        --secondary-color: #fcf9f8;
+        --text-primary: #1b120d;
+        --text-secondary: #9a634c;
+        --background-primary: #fcf9f8;
+        --background-secondary: #f3ebe7;
+      }
+    </style>
+</head>
+<body class="bg-[var(--background-primary)]" style='font-family: Manrope, "Noto Sans", sans-serif;'>
+<div class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col">
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-[var(--background-secondary)] px-10 py-3">
+<div class="flex items-center gap-3 text-[var(--text-primary)]">
+<svg class="h-8 w-8 text-[var(--primary-color)]" fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path clip-rule="evenodd" d="M24 6C14.0589 6 6 14.0589 6 24C6 33.9411 14.0589 42 24 42C33.9411 42 42 33.9411 42 24C42 14.0589 33.9411 6 24 6ZM24 0C10.7452 0 0 10.7452 0 24C0 37.2548 10.7452 48 24 48C37.2548 48 48 37.2548 48 24C48 10.7452 37.2548 0 24 0ZM30.75 29.25L24 22.5L17.25 29.25L15 27L24 18L33 27L30.75 29.25Z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+<h2 class="text-[var(--text-primary)] text-xl font-bold leading-tight tracking-[-0.015em]">TamilMatrimony</h2>
+</div>
+<div class="flex items-center gap-4">
+<div class="flex items-center justify-end gap-2">
+<a class="text-sm font-medium text-gray-500 hover:text-gray-900" href="#">தமிழ்</a>
+<span class="text-sm text-gray-400">|</span>
+<a class="text-sm font-medium text-gray-900" href="#">English</a>
+</div>
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-md h-10 px-4 bg-[var(--primary-color)] text-[var(--secondary-color)] text-sm font-bold leading-normal tracking-[0.015em] hover:bg-opacity-90 transition-colors">
+<span class="truncate">Register</span>
+</button>
+</div>
+</header>
+<main class="flex-1 flex items-center justify-center py-16 px-4 sm:px-6 lg:px-8">
+<div class="w-full max-w-md space-y-8">
+<div class="text-center">
+<h2 class="text-3xl font-extrabold text-[var(--text-primary)]">
+                Welcome Back!
+              </h2>
+<p class="mt-2 text-sm text-[var(--text-secondary)]">
+                Login to find your perfect match.
+              </p>
+</div>
+<form action="#" class="mt-8 space-y-6" method="POST">
+<input name="remember" type="hidden" value="true"/>
+<div class="rounded-md shadow-sm -space-y-px">
+<div>
+<label class="sr-only" for="mobile-number">Mobile Number</label>
+<div class="relative">
+<span class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-[var(--text-secondary)]">
+<span class="material-symbols-outlined">phone_iphone</span>
+</span>
+<input autocomplete="tel" class="appearance-none rounded-t-md relative block w-full px-3 pl-10 py-4 border border-[var(--background-secondary)] bg-[var(--background-secondary)] placeholder-[var(--text-secondary)] text-[var(--text-primary)] focus:outline-none focus:ring-[var(--primary-color)] focus:border-[var(--primary-color)] focus:z-10 sm:text-sm" id="mobile-number" name="mobile" placeholder="Mobile Number" required="" type="tel"/>
+</div>
+</div>
+<div>
+<label class="sr-only" for="password">Password</label>
+<div class="relative">
+<span class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-[var(--text-secondary)]">
+<span class="material-symbols-outlined">lock</span>
+</span>
+<input autocomplete="current-password" class="appearance-none rounded-b-md relative block w-full px-3 pl-10 py-4 border border-t-0 border-[var(--background-secondary)] bg-[var(--background-secondary)] placeholder-[var(--text-secondary)] text-[var(--text-primary)] focus:outline-none focus:ring-[var(--primary-color)] focus:border-[var(--primary-color)] focus:z-10 sm:text-sm" id="password" name="password" placeholder="Password" required="" type="password"/>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-end">
+<div class="text-sm">
+<a class="font-medium text-[var(--primary-color)] hover:text-opacity-80" href="#">
+                    Forgot your password?
+                  </a>
+</div>
+</div>
+<div>
+<button class="group relative w-full flex justify-center py-3 px-4 border border-transparent text-sm font-bold rounded-md text-white bg-[var(--primary-color)] hover:bg-opacity-90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[var(--primary-color)] transition-colors" type="submit">
+                  Login
+                </button>
+</div>
+</form>
+<p class="mt-6 text-center text-sm text-[var(--text-secondary)]">
+              Don't have an account?
+              <a class="font-medium text-[var(--primary-color)] hover:text-opacity-80" href="#">
+                Register Now
+              </a>
+</p>
+</div>
+</main>
+</div>
+</div>
+
+</body></html>

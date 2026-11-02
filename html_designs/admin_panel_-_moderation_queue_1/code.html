@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
+<link as="style" href="https://fonts.googleapis.com/css2?display=swap&amp;family=Manrope%3Awght%40400%3B500%3B700%3B800&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900" onload="this.rel='stylesheet'" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<title>Stitch Design</title>
+<link href="data:image/x-icon;base64," rel="icon" type="image/x-icon"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<style type="text/tailwindcss">
+      :root {
+        --primary-color: #ec5413;
+      }
+    </style>
+</head>
+<body>
+<div class="relative flex h-auto min-h-screen w-full flex-col bg-gray-50 group/design-root overflow-x-hidden" style='font-family: Manrope, "Noto Sans", sans-serif;'>
+<div class="flex h-full grow flex-col">
+<div class="flex flex-1">
+<aside class="flex flex-col w-64 bg-white border-r border-gray-200 p-4">
+<div class="flex flex-col gap-8">
+<h1 class="text-gray-900 text-xl font-bold px-3">Admin Panel</h1>
+<nav class="flex flex-col gap-2">
+<a class="flex items-center gap-3 px-3 py-2 rounded-md text-gray-500 hover:bg-gray-100 hover:text-gray-900 transition-colors" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+<p class="text-sm font-medium">Dashboard</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-md bg-[var(--primary-color)] text-white" href="#">
+<span class="material-symbols-outlined">person_add</span>
+<p class="text-sm font-medium">New Profiles</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-md text-gray-500 hover:bg-gray-100 hover:text-gray-900 transition-colors" href="#">
+<span class="material-symbols-outlined">how_to_reg</span>
+<p class="text-sm font-medium">Approved Profiles</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-md text-gray-500 hover:bg-gray-100 hover:text-gray-900 transition-colors" href="#">
+<span class="material-symbols-outlined">person_off</span>
+<p class="text-sm font-medium">Rejected Profiles</p>
+</a>
+</nav>
+</div>
+<div class="mt-auto">
+<a class="flex items-center gap-3 px-3 py-2 rounded-md text-gray-500 hover:bg-gray-100 hover:text-gray-900 transition-colors" href="#">
+<span class="material-symbols-outlined">settings</span>
+<p class="text-sm font-medium">Settings</p>
+</a>
+</div>
+</aside>
+<main class="flex-1 p-8">
+<header class="mb-8">
+<h2 class="text-3xl font-bold text-gray-900">New Profiles</h2>
+<p class="text-gray-500 mt-1">Review and moderate new profiles awaiting approval.</p>
+</header>
+<div class="overflow-x-auto rounded-lg border border-gray-200 bg-white">
+<table class="w-full text-sm text-left text-gray-500">
+<thead class="text-xs text-gray-700 uppercase bg-gray-50">
+<tr>
+<th class="px-6 py-3" scope="col">Profile ID</th>
+<th class="px-6 py-3" scope="col">Name</th>
+<th class="px-6 py-3" scope="col">Age</th>
+<th class="px-6 py-3" scope="col">Gender</th>
+<th class="px-6 py-3" scope="col">Location</th>
+<th class="px-6 py-3 text-center" scope="col">Action</th>
+</tr>
+</thead>
+<tbody>
+<tr class="bg-white border-b hover:bg-gray-50">
+<td class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">TN2024001</td>
+<td class="px-6 py-4">Priya S.</td>
+<td class="px-6 py-4">28</td>
+<td class="px-6 py-4">Female</td>
+<td class="px-6 py-4">Chennai</td>
+<td class="px-6 py-4">
+<div class="flex justify-center items-center gap-2">
+<button class="px-3 py-1.5 text-xs font-medium text-center text-white bg-green-600 rounded-md hover:bg-green-700 focus:ring-4 focus:outline-none focus:ring-green-300">Approve</button>
+<button class="px-3 py-1.5 text-xs font-medium text-center text-white bg-red-600 rounded-md hover:bg-red-700 focus:ring-4 focus:outline-none focus:ring-red-300">Reject</button>
+</div>
+</td>
+</tr>
+<tr class="bg-white border-b hover:bg-gray-50">
+<td class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">TN2024002</td>
+<td class="px-6 py-4">Arun K.</td>
+<td class="px-6 py-4">32</td>
+<td class="px-6 py-4">Male</td>
+<td class="px-6 py-4">Coimbatore</td>
+<td class="px-6 py-4">
+<div class="flex justify-center items-center gap-2">
+<button class="px-3 py-1.5 text-xs font-medium text-center text-white bg-green-600 rounded-md hover:bg-green-700 focus:ring-4 focus:outline-none focus:ring-green-300">Approve</button>
+<button class="px-3 py-1.5 text-xs font-medium text-center text-white bg-red-600 rounded-md hover:bg-red-700 focus:ring-4 focus:outline-none focus:ring-red-300">Reject</button>
+</div>
+</td>
+</tr>
+<tr class="bg-white border-b hover:bg-gray-50">
+<td class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">TN2024003</td>
+<td class="px-6 py-4">Lakshmi R.</td>
+<td class="px-6 py-4">25</td>
+<td class="px-6 py-4">Female</td>
+<td class="px-6 py-4">Madurai</td>
+<td class="px-6 py-4">
+<div class="flex justify-center items-center gap-2">
+<button class="px-3 py-1.5 text-xs font-medium text-center text-white bg-green-600 rounded-md hover:bg-green-700 focus:ring-4 focus:outline-none focus:ring-green-300">Approve</button>
+<button class="px-3 py-1.5 text-xs font-medium text-center text-white bg-red-600 rounded-md hover:bg-red-700 focus:ring-4 focus:outline-none focus:ring-red-300">Reject</button>
+</div>
+</td>
+</tr>
+<tr class="bg-white border-b hover:bg-gray-50">
+<td class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">TN2024004</td>
+<td class="px-6 py-4">Vijay M.</td>
+<td class="px-6 py-4">30</td>
+<td class="px-6 py-4">Male</td>
+<td class="px-6 py-4">Salem</td>
+<td class="px-6 py-4">
+<div class="flex justify-center items-center gap-2">
+<button class="px-3 py-1.5 text-xs font-medium text-center text-white bg-green-600 rounded-md hover:bg-green-700 focus:ring-4 focus:outline-none focus:ring-green-300">Approve</button>
+<button class="px-3 py-1.5 text-xs font-medium text-center text-white bg-red-600 rounded-md hover:bg-red-700 focus:ring-4 focus:outline-none focus:ring-red-300">Reject</button>
+</div>
+</td>
+</tr>
+<tr class="bg-white border-b hover:bg-gray-50">
+<td class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">TN2024005</td>
+<td class="px-6 py-4">Deepa N.</td>
+<td class="px-6 py-4">27</td>
+<td class="px-6 py-4">Female</td>
+<td class="px-6 py-4">Tiruchirappalli</td>
+<td class="px-6 py-4">
+<div class="flex justify-center items-center gap-2">
+<button class="px-3 py-1.5 text-xs font-medium text-center text-white bg-green-600 rounded-md hover:bg-green-700 focus:ring-4 focus:outline-none focus:ring-green-300">Approve</button>
+<button class="px-3 py-1.5 text-xs font-medium text-center text-white bg-red-600 rounded-md hover:bg-red-700 focus:ring-4 focus:outline-none focus:ring-red-300">Reject</button>
+</div>
+</td>
+</tr>
+<tr class="bg-white border-b hover:bg-gray-50">
+<td class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">TN2024006</td>
+<td class="px-6 py-4">Suresh V.</td>
+<td class="px-6 py-4">35</td>
+<td class="px-6 py-4">Male</td>
+<td class="px-6 py-4">Tirunelveli</td>
+<td class="px-6 py-4">
+<div class="flex justify-center items-center gap-2">
+<button class="px-3 py-1.5 text-xs font-medium text-center text-white bg-green-600 rounded-md hover:bg-green-700 focus:ring-4 focus:outline-none focus:ring-green-300">Approve</button>
+<button class="px-3 py-1.5 text-xs font-medium text-center text-white bg-red-600 rounded-md hover:bg-red-700 focus:ring-4 focus:outline-none focus:ring-red-300">Reject</button>
+</div>
+</td>
+</tr>
+<tr class="bg-white border-b hover:bg-gray-50">
+<td class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">TN2024007</td>
+<td class="px-6 py-4">Meena P.</td>
+<td class="px-6 py-4">29</td>
+<td class="px-6 py-4">Female</td>
+<td class="px-6 py-4">Erode</td>
+<td class="px-6 py-4">
+<div class="flex justify-center items-center gap-2">
+<button class="px-3 py-1.5 text-xs font-medium text-center text-white bg-green-600 rounded-md hover:bg-green-700 focus:ring-4 focus:outline-none focus:ring-green-300">Approve</button>
+<button class="px-3 py-1.5 text-xs font-medium text-center text-white bg-red-600 rounded-md hover:bg-red-700 focus:ring-4 focus:outline-none focus:ring-red-300">Reject</button>
+</div>
+</td>
+</tr>
+<tr class="bg-white hover:bg-gray-50">
+<td class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">TN2024008</td>
+<td class="px-6 py-4">Ravi S.</td>
+<td class="px-6 py-4">31</td>
+<td class="px-6 py-4">Male</td>
+<td class="px-6 py-4">Vellore</td>
+<td class="px-6 py-4">
+<div class="flex justify-center items-center gap-2">
+<button class="px-3 py-1.5 text-xs font-medium text-center text-white bg-green-600 rounded-md hover:bg-green-700 focus:ring-4 focus:outline-none focus:ring-green-300">Approve</button>
+<button class="px-3 py-1.5 text-xs font-medium text-center text-white bg-red-600 rounded-md hover:bg-red-700 focus:ring-4 focus:outline-none focus:ring-red-300">Reject</button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</main>
+</div>
+</div>
+</div>
+
+</body></html>

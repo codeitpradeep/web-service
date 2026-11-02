@@ -1,0 +1,748 @@
+{
+    "@@locale": "en",
+    "appTitle": "Tamil Matrimony",
+    "@appTitle": {
+        "description": "The title of the application"
+    },
+    "findYourPerfectMatch": "Find Your Perfect Match",
+    "@findYourPerfectMatch": {
+        "description": "Text for the hero section headline"
+    },
+    "joinThousandsOfHappyCouples": "Join thousands of happy couples who found their life partners through our trusted platform.",
+    "@joinThousandsOfHappyCouples": {
+        "description": "Text for the hero section subhead"
+    },
+    "age": "Age",
+    "@age": {
+        "description": "Label for age dropdown"
+    },
+    "location": "Location",
+    "@location": {
+        "description": "Label for location dropdown"
+    },
+    "imLookingForA": "I'm looking for a",
+    "@imLookingForA": {
+        "description": "Label for gender preference dropdown"
+    },
+    "search": "Search",
+    "@search": {
+        "description": "Text for search button"
+    },
+    "featuredProfiles": "Featured Profiles",
+    "@featuredProfiles": {
+        "description": "Section title for featured profiles"
+    },
+    "findYourLifePartnerIn3Steps": "Find Your Life Partner in 3 Simple Steps",
+    "@findYourLifePartnerIn3Steps": {
+        "description": "Section title for how it works"
+    },
+    "ourPlatformIsDesigned": "Our platform is designed to make your search for a life partner easy, safe, and enjoyable.",
+    "@ourPlatformIsDesigned": {
+        "description": "Section subtitle for how it works"
+    },
+    "createYourProfile": "Create Your Profile",
+    "@createYourProfile": {
+        "description": "Step 1 title"
+    },
+    "registerForFree": "Register for free & create your detailed profile to be discovered by potential matches.",
+    "@registerForFree": {
+        "description": "Step 1 description"
+    },
+    "searchAndConnect": "Search & Connect",
+    "@searchAndConnect": {
+        "description": "Step 2 title"
+    },
+    "browseThousandsOfVerifiedProfiles": "Browse thousands of verified profiles, express interest, and connect with members you like.",
+    "@browseThousandsOfVerifiedProfiles": {
+        "description": "Step 2 description"
+    },
+    "startYourJourney": "Start Your Journey",
+    "@startYourJourney": {
+        "description": "Step 3 title"
+    },
+    "initiateConversations": "Initiate conversations, get to know each other, and take the first step towards a happy marriage.",
+    "@initiateConversations": {
+        "description": "Step 3 description"
+    },
+    "copyrightText": "© 2024 Tamil Matrimony. All rights reserved.",
+    "@copyrightText": {
+        "description": "Copyright text in the footer"
+    },
+    "aboutUs": "About Us",
+    "@aboutUs": {
+        "description": "Footer link text for About Us"
+    },
+    "contactUs": "Contact Us",
+    "@contactUs": {
+        "description": "Footer link text for Contact Us"
+    },
+    "privacyPolicy": "Privacy Policy",
+    "@privacyPolicy": {
+        "description": "Footer link text for Privacy Policy"
+    },
+    "termsOfService": "Terms of Service",
+    "@termsOfService": {
+        "description": "Footer link text for Terms of Service"
+    },
+    "register": "Register",
+    "@register": {
+        "description": "Text for Register button"
+    },
+    "login": "Login",
+    "@login": {
+        "description": "Text for Login button"
+    },
+    "home": "Home",
+    "@home": {
+        "description": "Navigation link text for Home"
+    },
+    "matches": "Matches",
+    "@matches": {
+        "description": "Navigation link text for Matches"
+    },
+    "help": "Help",
+    "@help": {
+        "description": "Navigation link text for Help"
+    },
+    "createYourProfilePageTitle": "Create your Profile",
+    "@createYourProfilePageTitle": {
+        "description": "Title for Register page"
+    },
+    "joinTheLargestTamilMatrimonial": "Join the largest Tamil matrimonial service and find your perfect match.",
+    "@joinTheLargestTamilMatrimonial": {
+        "description": "Subtitle for Register page"
+    },
+    "thisProfileIsForA": "This profile is for a",
+    "@thisProfileIsForA": {
+        "description": "Label for profile type selection"
+    },
+    "bride": "Bride",
+    "@bride": {
+        "description": "Radio button label for Bride"
+    },
+    "groom": "Groom",
+    "@groom": {
+        "description": "Radio button label for Groom"
+    },
+    "accountType": "Account Type",
+    "@accountType": {
+        "description": "Label for account type selection"
+    },
+    "individual": "Individual",
+    "@individual": {
+        "description": "Radio button label for Individual"
+    },
+    "family": "Family",
+    "@family": {
+        "description": "Radio button label for Family"
+    },
+    "agent": "Agent",
+    "@agent": {
+        "description": "Radio button label for Agent"
+    },
+    "personalInformation": "Personal Information",
+    "@personalInformation": {
+        "description": "Section title for personal information"
+    },
+    "name": "Name",
+    "@name": {
+        "description": "Label for name input field"
+    },
+    "enterFullName": "Enter full name",
+    "@enterFullName": {
+        "description": "Hint text for full name input"
+    },
+    "dateOfBirth": "Date of Birth",
+    "@dateOfBirth": {
+        "description": "Label for date of birth input field"
+    },
+    "religion": "Religion",
+    "@religion": {
+        "description": "Label for religion dropdown"
+    },
+    "motherTongue": "Mother Tongue",
+    "@motherTongue": {
+        "description": "Label for mother tongue dropdown"
+    },
+    "contactDetails": "Contact Details",
+    "@contactDetails": {
+        "description": "Section title for contact details"
+    },
+    "emailAddress": "Email Address",
+    "@emailAddress": {
+        "description": "Label for email address input field"
+    },
+    "enterEmailAddress": "Enter email address",
+    "@enterEmailAddress": {
+        "description": "Hint text for email address input"
+    },
+    "mobileNumber": "Mobile Number",
+    "@mobileNumber": {
+        "description": "Label for mobile number input field"
+    },
+    "enterMobileNumber": "Enter mobile number",
+    "@enterMobileNumber": {
+        "description": "Hint text for mobile number input"
+    },
+    "setPassword": "Set Password",
+    "@setPassword": {
+        "description": "Section title for set password"
+    },
+    "createPassword": "Create Password",
+    "@createPassword": {
+        "description": "Label for create password input field"
+    },
+    "enterStrongPassword": "Enter a strong password",
+    "@enterStrongPassword": {
+        "description": "Hint text for create password input"
+    },
+    "confirmPassword": "Confirm Password",
+    "@confirmPassword": {
+        "description": "Label for confirm password input field"
+    },
+    "reEnterYourPassword": "Re-enter your password",
+    "@reEnterYourPassword": {
+        "description": "Hint text for confirm password input"
+    },
+    "registerNow": "Register Now",
+    "@registerNow": {
+        "description": "Text for Register Now button"
+    },
+    "byProceedingYouAgreeToOur": "By proceeding, you agree to our ",
+    "@byProceedingYouAgreeToOur": {
+        "description": "Part of the terms and privacy policy text"
+    },
+    "termsOfUse": "Terms of Use",
+    "@termsOfUse": {
+        "description": "Terms of Use link text"
+    },
+    "and": " and ",
+    "@and": {
+        "description": "Conjunction in terms and privacy policy text"
+    },
+    "nextEducationCareer": "Next: Education/Career",
+    "@nextEducationCareer": {
+        "description": "Text for Next button in Personal Info tab"
+    },
+    "nextFamily": "Next: Family",
+    "@nextFamily": {
+        "description": "Text for Next button in Education/Career tab"
+    },
+    "nextPreferences": "Next: Preferences",
+    "@nextPreferences": {
+        "description": "Text for Next button in Family tab"
+    },
+    "nextPhotoUploads": "Next: Photo Uploads",
+    "@nextPhotoUploads": {
+        "description": "Text for Next button in Preferences tab"
+    },
+    "saveProfile": "Save Profile",
+    "@saveProfile": {
+        "description": "Text for Save Profile button in Photo Uploads tab"
+    },
+    "previous": "Previous",
+    "@previous": {
+        "description": "Text for Previous button"
+    },
+    "uploadYourPhotos": "Upload Your Photos",
+    "@uploadYourPhotos": {
+        "description": "Title for photo uploads section"
+    },
+    "dragAndDropYourPhotos": "Drag and drop your photos here, or click to browse",
+    "@dragAndDropYourPhotos": {
+        "description": "Placeholder text for photo upload area"
+    },
+    "browsePhotos": "Browse Photos",
+    "@browsePhotos": {
+        "description": "Button text for browsing photos"
+    },
+    "highestEducation": "Highest Education",
+    "@highestEducation": {
+        "description": "Label for highest education input field"
+    },
+    "collegeUniversity": "College/University",
+    "@collegeUniversity": {
+        "description": "Label for college/university input field"
+    },
+    "occupation": "Occupation",
+    "@occupation": {
+        "description": "Label for occupation dropdown"
+    },
+    "companyName": "Company Name",
+    "@companyName": {
+        "description": "Label for company name input field"
+    },
+    "annualIncome": "Annual Income",
+    "@annualIncome": {
+        "description": "Label for annual income dropdown"
+    },
+    "fathersOccupation": "Father's Occupation",
+    "@fathersOccupation": {
+        "description": "Label for father's occupation input"
+    },
+    "mothersOccupation": "Mother's Occupation",
+    "@mothersOccupation": {
+        "description": "Label for mother's occupation input"
+    },
+    "numberOfSiblings": "Number of Siblings",
+    "@numberOfSiblings": {
+        "description": "Label for number of siblings dropdown"
+    },
+    "familyValues": "Family Values",
+    "@familyValues": {
+        "description": "Label for family values dropdown"
+    },
+    "partnerAgeRangeFrom": "Partner Age Range (From)",
+    "@partnerAgeRangeFrom": {
+        "description": "Label for partner age range (from) dropdown"
+    },
+    "partnerAgeRangeTo": "Partner Age Range (To)",
+    "@partnerAgeRangeTo": {
+        "description": "Label for partner age range (to) dropdown"
+    },
+    "partnerMaritalStatus": "Partner Marital Status",
+    "@partnerMaritalStatus": {
+        "description": "Label for partner marital status dropdown"
+    },
+    "partnerRasi": "Partner Rasi",
+    "@partnerRasi": {
+        "description": "Label for partner Rasi dropdown"
+    },
+    "partnerNachathram": "Partner Nachathram",
+    "@partnerNachathram": {
+        "description": "Label for partner Nachathram dropdown"
+    },
+    "partnerMotherTongue": "Partner Mother Tongue",
+    "@partnerMotherTongue": {
+        "description": "Label for partner mother tongue dropdown"
+    },
+    "partnerCasteCommunity": "Partner Caste/Community",
+    "@partnerCasteCommunity": {
+        "description": "Label for partner caste/community dropdown"
+    },
+    "partnerCountry": "Partner Country",
+    "@partnerCountry": {
+        "description": "Label for partner country dropdown"
+    },
+    "partnerState": "Partner State",
+    "@partnerState": {
+        "description": "Label for partner state dropdown"
+    },
+    "partnerCity": "Partner City",
+    "@partnerCity": {
+        "description": "Label for partner city dropdown"
+    },
+    "searchResults": "Search Results",
+    "@searchResults": {
+        "description": "Title for search results page"
+    },
+    "showingResults": "Showing 1-12 of 1,234 results",
+    "@showingResults": {
+        "description": "Subtitle for search results page"
+    },
+    "filters": "Filters",
+    "@filters": {
+        "description": "Title for filter panel"
+    },
+    "ageRange": "Age Range",
+    "@ageRange": {
+        "description": "Label for age range slider"
+    },
+    "applyFilters": "Apply Filters",
+    "@applyFilters": {
+        "description": "Button text for applying filters"
+    },
+    "sortBy": "Sort by",
+    "@sortBy": {
+        "description": "Button text for sort by"
+    },
+    "saveSearch": "Save Search",
+    "@saveSearch": {
+        "description": "Button text for save search"
+    },
+    "expressInterest": "Express Interest",
+    "@expressInterest": {
+        "description": "Button text for expressing interest"
+    },
+    "shortlist": "Shortlist",
+    "@shortlist": {
+        "description": "Button text for shortlisting a profile"
+    },
+    "viewProfile": "View Profile",
+    "@viewProfile": {
+        "description": "Button text for viewing a profile"
+    },
+    "basicDetails": "Basic Details",
+    "@basicDetails": {
+        "description": "Tab title for Basic Details"
+    },
+    "educationCareer": "Education & Career",
+    "@educationCareer": {
+        "description": "Tab title for Education & Career"
+    },
+    "familyDetails": "Family Details",
+    "@familyDetails": {
+        "description": "Tab title for Family Details"
+    },
+    "preferences": "Preferences",
+    "@preferences": {
+        "description": "Tab title for Preferences"
+    },
+    "about": "About",
+    "@about": {
+        "description": "Section title for 'About' in profile view"
+    },
+    "aboutMe": "About Me",
+    "@aboutMe": {
+        "description": "Label for 'About Me' in profile view"
+    },
+    "myProfile": "My Profile",
+    "@myProfile": {
+        "description": "Tab title for My Profile"
+    },
+    "editProfile": "Edit Profile",
+    "@editProfile": {
+        "description": "Button text for Edit Profile"
+    },
+    "yourMatches": "Your Matches",
+    "@yourMatches": {
+        "description": "Title for Your Matches section"
+    },
+    "interestsSentReceived": "Interests Sent/Received",
+    "@interestsSentReceived": {
+        "description": "Tab title for Interests Sent/Received"
+    },
+    "messages": "Messages",
+    "@messages": {
+        "description": "Tab title for Messages"
+    },
+    "privacySettings": "Privacy Settings",
+    "@privacySettings": {
+        "description": "Tab title for Privacy Settings"
+    },
+    "searchConversations": "Search conversations...",
+    "@searchConversations": {
+        "description": "Hint text for search conversations input"
+    },
+    "noConversationSelected": "No Conversation Selected",
+    "@noConversationSelected": {
+        "description": "Placeholder text for no conversation selected"
+    },
+    "selectAConversation": "Select a conversation from the left to start chatting.",
+    "@selectAConversation": {
+        "description": "Instructional text for selecting a conversation"
+    },
+    "typeYourMessage": "Type your message here...",
+    "@typeYourMessage": {
+        "description": "Hint text for message input field"
+    },
+    "send": "Send",
+    "@send": {
+        "description": "Button text for sending a message"
+    },
+    "adminPanel": "Admin Panel",
+    "@adminPanel": {
+        "description": "Title for Admin Panel"
+    },
+    "newProfiles": "New Profiles",
+    "@newProfiles": {
+        "description": "Tab title for New Profiles in Admin Panel"
+    },
+    "approvedProfiles": "Approved Profiles",
+    "@approvedProfiles": {
+        "description": "Tab title for Approved Profiles in Admin Panel"
+    },
+    "rejectedProfiles": "Rejected Profiles",
+    "@rejectedProfiles": {
+        "description": "Tab title for Rejected Profiles in Admin Panel"
+    },
+    "settings": "Settings",
+    "@settings": {
+        "description": "Tab title for Settings in Admin Panel"
+    },
+    "reviewAndModerateNewProfiles": "Review and moderate new profiles awaiting approval.",
+    "@reviewAndModerateNewProfiles": {
+        "description": "Subtitle for New Profiles section in Admin Panel"
+    },
+    "profileId": "Profile ID",
+    "@profileId": {
+        "description": "Table column header for Profile ID"
+    },
+    "gender": "Gender",
+    "@gender": {
+        "description": "Table column header for Gender"
+    },
+    "action": "Action",
+    "@action": {
+        "description": "Table column header for Action"
+    },
+    "approve": "Approve",
+    "@approve": {
+        "description": "Button text for approving a profile"
+    },
+    "reject": "Reject",
+    "@reject": {
+        "description": "Button text for rejecting a profile"
+    },
+    "tamilMatrimonyMission": "Our mission is to help individuals from the Tamil community find their compatible life partners. We are committed to creating a secure, reliable, and user-friendly platform that respects traditional values while embracing modern aspirations. Our goal is to foster meaningful connections and facilitate successful marriages.",
+    "@tamilMatrimonyMission": {
+        "description": "About Us page mission statement"
+    },
+    "ourCommitment": "Our Commitment",
+    "@ourCommitment": {
+        "description": "About Us page section title for commitment"
+    },
+    "commitmentDetails": "We are dedicated to:
+
+*   **Privacy & Security:** Ensuring the utmost privacy and security of your personal information.
+*   **Authenticity:** Verifying profiles to maintain a genuine and trustworthy community.
+*   **User Experience:** Providing an intuitive and pleasant platform for your partner search.
+*   **Support:** Offering excellent customer support to assist you at every step.",
+    "@commitmentDetails": {
+        "description": "About Us page details for commitment"
+    },
+    "frequentlyAskedQuestions": "Frequently Asked Questions",
+    "@frequentlyAskedQuestions": {
+        "description": "FAQ page title"
+    },
+    "howDoIRegister": "How do I register?",
+    "@howDoIRegister": {
+        "description": "FAQ question: How do I register?"
+    },
+    "registrationAnswer": "You can register for free by clicking on the 'Register' button on the homepage and following the simple steps.",
+    "@registrationAnswer": {
+        "description": "FAQ answer: Registration"
+    },
+    "isMyProfileSecure": "Is my profile information secure?",
+    "@isMyProfileSecure": {
+        "description": "FAQ question: Is my profile information secure?"
+    },
+    "securityAnswer": "Yes, we use advanced security measures to protect your personal data. Please refer to our Privacy Policy for more details.",
+    "@securityAnswer": {
+        "description": "FAQ answer: Security"
+    },
+    "canICancelMySubscription": "Can I cancel my subscription?",
+    "@canICancelMySubscription": {
+        "description": "FAQ question: Can I cancel my subscription?"
+    },
+    "cancelSubscriptionAnswer": "You can cancel your premium subscription at any time from your dashboard settings. Refunds are subject to our refund policy.",
+    "@cancelSubscriptionAnswer": {
+        "description": "FAQ answer: Cancel Subscription"
+    },
+    "howDoIContactSupport": "How do I contact customer support?",
+    "@howDoIContactSupport": {
+        "description": "FAQ question: How do I contact customer support?"
+    },
+    "contactSupportAnswer": "You can reach our customer support team via the 'Contact Us' page, email, or phone during business hours.",
+    "@contactSupportAnswer": {
+        "description": "FAQ answer: Contact Support"
+    },
+    "privacyPolicyTitle": "Privacy Policy",
+    "@privacyPolicyTitle": {
+        "description": "Privacy Policy page title"
+    },
+    "effectiveDate": "Effective Date: September 14, 2024",
+    "@effectiveDate": {
+        "description": "Privacy Policy effective date"
+    },
+    "introduction": "1. Introduction",
+    "@introduction": {
+        "description": "Privacy Policy section title: Introduction"
+    },
+    "introductionContent": "Welcome to Tamil Matrimony. We are committed to protecting your privacy and personal information. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website.",
+    "@introductionContent": {
+        "description": "Privacy Policy section content: Introduction"
+    },
+    "informationWeCollect": "2. Information We Collect",
+    "@informationWeCollect": {
+        "description": "Privacy Policy section title: Information We Collect"
+    },
+    "informationWeCollectContent": "We collect various types of information, including:
+
+*   **Personal Data:** Name, email address, phone number, date of birth, gender, religion, caste, education, occupation, photos, and other details provided during registration and profile creation.
+*   **Usage Data:** Information on how you access and use the website, such as IP address, browser type, pages visited, and time spent on pages.
+*   **Communication Data:** Records of communications with other users and our customer support.",
+    "@informationWeCollectContent": {
+        "description": "Privacy Policy section content: Information We Collect"
+    },
+    "howWeUseYourInformation": "3. How We Use Your Information",
+    "@howWeUseYourInformation": {
+        "description": "Privacy Policy section title: How We Use Your Information"
+    },
+    "howWeUseYourInformationContent": "We use the collected information for various purposes, including to:
+
+*   Provide and maintain our service.
+*   Create and manage your account and profile.
+*   Facilitate connections and matches with other users.
+*   Improve and personalize your experience on our website.
+*   Communicate with you about services, updates, and promotional offers.
+*   Monitor and analyze usage and trends to improve the website's functionality.",
+    "@howWeUseYourInformationContent": {
+        "description": "Privacy Policy section content: How We Use Your Information"
+    },
+    "disclosureOfYourInformation": "4. Disclosure of Your Information",
+    "@disclosureOfYourInformation": {
+        "description": "Privacy Policy section title: Disclosure of Your Information"
+    },
+    "disclosureOfYourInformationContent": "We may disclose your information to:
+
+*   **Other Users:** Certain profile information (excluding sensitive contact details) is visible to other registered users.
+*   **Service Providers:** Third-party vendors who perform services on our behalf, such as payment processing, data analysis, and customer support.
+*   **Legal Requirements:** When required by law or in response to valid requests by public authorities.
+*   **Business Transfers:** In connection with a merger, sale of company assets, or acquisition.",
+    "@disclosureOfYourInformationContent": {
+        "description": "Privacy Policy section content: Disclosure of Your Information"
+    },
+    "securityOfData": "5. Security of Data",
+    "@securityOfData": {
+        "description": "Privacy Policy section title: Security of Data"
+    },
+    "securityOfDataContent": "We implement a variety of security measures to maintain the safety of your personal information. However, no method of transmission over the Internet or method of electronic storage is 100% secure.",
+    "@securityOfDataContent": {
+        "description": "Privacy Policy section content: Security of Data"
+    },
+    "yourRights": "6. Your Rights",
+    "@yourRights": {
+        "description": "Privacy Policy section title: Your Rights"
+    },
+    "yourRightsContent": "You have the right to access, update, or delete your personal information at any time. You can also object to the processing of your data, request data portability, and withdraw your consent.",
+    "@yourRightsContent": {
+        "description": "Privacy Policy section content: Your Rights"
+    },
+    "changesToThisPrivacyPolicy": "7. Changes to This Privacy Policy",
+    "@changesToThisPrivacyPolicy": {
+        "description": "Privacy Policy section title: Changes to This Privacy Policy"
+    },
+    "changesToThisPrivacyPolicyContent": "We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page.",
+    "@changesToThisPrivacyPolicyContent": {
+        "description": "Privacy Policy section content: Changes to This Privacy Policy"
+    },
+    "contactUsPrivacy": "8. Contact Us",
+    "@contactUsPrivacy": {
+        "description": "Privacy Policy section title: Contact Us"
+    },
+    "contactUsPrivacyContent": "If you have any questions about this Privacy Policy, please contact us at support@tamilmatrimony.com.",
+    "@contactUsPrivacyContent": {
+        "description": "Privacy Policy section content: Contact Us"
+    },
+    "termsAndConditions": "Terms & Conditions",
+    "@termsAndConditions": {
+        "description": "Terms & Conditions page title"
+    },
+    "acceptanceOfTerms": "1. Acceptance of Terms",
+    "@acceptanceOfTerms": {
+        "description": "Terms & Conditions section title: Acceptance of Terms"
+    },
+    "acceptanceOfTermsContent": "By accessing and using Tamil Matrimony, you agree to be bound by these Terms and Conditions and all applicable laws and regulations. If you do not agree with any of these terms, you are prohibited from using or accessing this site.",
+    "@acceptanceOfTermsContent": {
+        "description": "Terms & Conditions section content: Acceptance of Terms"
+    },
+    "eligibility": "2. Eligibility",
+    "@eligibility": {
+        "description": "Terms & Conditions section title: Eligibility"
+    },
+    "eligibilityContent": "You must be at least 18 years old and legally able to enter into contracts to use our services. By using the site, you represent and warrant that you meet these eligibility requirements.",
+    "@eligibilityContent": {
+        "description": "Terms & Conditions section content: Eligibility"
+    },
+    "userAccount": "3. User Account",
+    "@userAccount": {
+        "description": "Terms & Conditions section title: User Account"
+    },
+    "userAccountContent": "You are responsible for maintaining the confidentiality of your account information and for all activities that occur under your account. You agree to notify us immediately of any unauthorized use of your account.",
+    "@userAccountContent": {
+        "description": "Terms & Conditions section content: User Account"
+    },
+    "codeOfConduct": "4. Code of Conduct",
+    "@codeOfConduct": {
+        "description": "Terms & Conditions section title: Code of Conduct"
+    },
+    "codeOfConductContent": "You agree not to use the website for any unlawful or prohibited purpose, including but not limited to harassment, fraud, or spamming. You must respect other users and maintain a courteous demeanor.",
+    "@codeOfConductContent": {
+        "description": "Terms & Conditions section content: Code of Conduct"
+    },
+    "contentAndIntellectualProperty": "5. Content and Intellectual Property",
+    "@contentAndIntellectualProperty": {
+        "description": "Terms & Conditions section title: Content and Intellectual Property"
+    },
+    "contentAndIntellectualPropertyContent": "You retain ownership of the content you submit to the website, but you grant us a license to use, reproduce, and distribute your content in connection with the service. All other content on the site is our property.",
+    "@contentAndIntellectualPropertyContent": {
+        "description": "Terms & Conditions section content: Content and Intellectual Property"
+    },
+    "limitationOfLiability": "6. Limitation of Liability",
+    "@limitationOfLiability": {
+        "description": "Terms & Conditions section title: Limitation of Liability"
+    },
+    "limitationOfLiabilityContent": "We will not be liable for any damages arising out of your use or inability to use the website. This includes direct, indirect, incidental, punitive, and consequential damages.",
+    "@limitationOfLiabilityContent": {
+        "description": "Terms & Conditions section content: Limitation of Liability"
+    },
+    "governingLaw": "7. Governing Law",
+    "@governingLaw": {
+        "description": "Terms & Conditions section title: Governing Law"
+    },
+    "governingLawContent": "These Terms and Conditions are governed by and construed in accordance with the laws of Tamil Nadu, India, without regard to its conflict of law provisions.",
+    "@governingLawContent": {
+        "description": "Terms & Conditions section content: Governing Law"
+    },
+    "changesToTerms": "8. Changes to Terms",
+    "@changesToTerms": {
+        "description": "Terms & Conditions section title: Changes to Terms"
+    },
+    "changesToTermsContent": "We reserve the right to revise these Terms and Conditions at any time without prior notice. By using this website, you are agreeing to be bound by the current version of these Terms and Conditions.",
+    "@changesToTermsContent": {
+        "description": "Terms & Conditions section content: Changes to Terms"
+    },
+    "faqs": "FAQs",
+    "@faqs": {
+        "description": "Tab title for FAQs in Public pages"
+    },
+    "dashboard": "Dashboard",
+    "@dashboard": {
+        "description": "Tab title for Dashboard in Admin Panel"
+    },
+    "nameHint": "Enter full name",
+    "@nameHint": {
+        "description": "Hint text for name input field"
+    },
+    "dobHint": "Select your date of birth",
+    "@dobHint": {
+        "description": "Hint text for date of birth input field"
+    },
+    "maritalStatus": "Marital Status",
+    "@maritalStatus": {
+        "description": "Label for marital status dropdown"
+    },
+    "casteCommunity": "Caste/Community",
+    "@casteCommunity": {
+        "description": "Label for caste/community dropdown"
+    },
+    "subCasteOptional": "Sub-Caste (Optional)",
+    "@subCasteOptional": {
+        "description": "Label for sub-caste input field"
+    },
+    "countryLivingIn": "Country Living In",
+    "@countryLivingIn": {
+        "description": "Label for country living in dropdown"
+    },
+    "stateLivingIn": "State Living In",
+    "@stateLivingIn": {
+        "description": "Label for state living in dropdown"
+    },
+    "cityLivingIn": "City Living In",
+    "@cityLivingIn": {
+        "description": "Label for city living in dropdown"
+    },
+    "contactNumber": "Contact Number",
+    "@contactNumber": {
+        "description": "Label for contact number input field"
+    },
+    "pleaseEnterEmailAddress": "Please enter an email address",
+    "@pleaseEnterEmailAddress": {
+        "description": "Validation message for empty email field"
+    },
+    "pleaseEnterValidEmailAddress": "Please enter a valid email address",
+    "@pleaseEnterValidEmailAddress": {
+        "description": "Validation message for invalid email format"
+    }
+}

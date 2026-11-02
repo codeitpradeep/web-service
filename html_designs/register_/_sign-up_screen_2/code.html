@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link as="style" href="https://fonts.googleapis.com/css2?display=swap&amp;family=Manrope%3Awght%40400%3B500%3B700%3B800&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900" onload="this.rel='stylesheet'" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<title>Tamil Matrimony Registration</title>
+<link href="data:image/x-icon;base64," rel="icon" type="image/x-icon"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<style type="text/tailwindcss">
+        :root {
+            --primary-color: #ec5413;
+            --secondary-color: #fcf9f8;
+            --text-primary: #1b120d;
+            --text-secondary: #9a634c;
+            --border-color: #e7d6cf;
+        }
+    </style>
+</head>
+<body class="bg-[var(--secondary-color)] font-['Manrope',_'Noto_Sans',_sans-serif]">
+<div class="flex flex-col min-h-screen">
+<header class="border-b border-solid border-[var(--border-color)]">
+<nav class="container mx-auto flex items-center justify-between px-6 py-4">
+<a class="flex items-center gap-3 text-[var(--text-primary)]" href="#">
+<svg class="h-8 w-8 text-[var(--primary-color)]" fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_6_535)">
+<path clip-rule="evenodd" d="M47.2426 24L24 47.2426L0.757355 24L24 0.757355L47.2426 24ZM12.2426 21H35.7574L24 9.24264L12.2426 21Z" fill="currentColor" fill-rule="evenodd"></path>
+</g>
+<defs>
+<clipPath id="clip0_6_535">
+<rect fill="white" height="48" width="48"></rect>
+</clipPath>
+</defs>
+</svg>
+<h1 class="text-xl font-bold tracking-tight">TamilMatrimony</h1>
+</a>
+<div class="flex items-center gap-6">
+<div class="hidden md:flex items-center gap-6">
+<a class="text-sm font-medium text-[var(--text-primary)] hover:text-[var(--primary-color)] transition-colors" href="#">Matches</a>
+<a class="text-sm font-medium text-[var(--text-primary)] hover:text-[var(--primary-color)] transition-colors" href="#">Search</a>
+<a class="text-sm font-medium text-[var(--text-primary)] hover:text-[var(--primary-color)] transition-colors" href="#">Premium</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="flex items-center gap-1 text-sm font-medium text-[var(--text-primary)]">
+<span>EN</span>
+<span class="material-symbols-outlined text-base"> language </span>
+</button>
+<button class="rounded-full bg-[var(--primary-color)] px-6 py-2 text-sm font-bold text-white shadow-sm hover:bg-opacity-90 transition-all">
+                            Login
+                        </button>
+</div>
+</div>
+</nav>
+</header>
+<main class="flex-grow flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
+<div class="w-full max-w-3xl space-y-8">
+<div class="text-center">
+<h2 class="text-3xl font-bold tracking-tight text-[var(--text-primary)] sm:text-4xl">Create your Profile</h2>
+<p class="mt-2 text-sm text-[var(--text-secondary)]">Join the largest Tamil matrimonial service and find your perfect match.</p>
+</div>
+<div class="bg-white p-8 rounded-2xl shadow-lg border border-[var(--border-color)]">
+<form action="#" class="space-y-6" method="POST">
+<div>
+<label class="block text-sm font-medium text-[var(--text-primary)] mb-2">This profile is for a</label>
+<div class="grid grid-cols-2 gap-4">
+<label class="flex items-center p-4 rounded-lg border border-[var(--border-color)] cursor-pointer hover:bg-[var(--secondary-color)] transition-colors">
+<input checked="" class="form-radio text-[var(--primary-color)] focus:ring-[var(--primary-color)]" name="gender" type="radio" value="bride"/>
+<span class="ml-3 text-sm font-medium text-[var(--text-primary)]">Bride</span>
+</label>
+<label class="flex items-center p-4 rounded-lg border border-[var(--border-color)] cursor-pointer hover:bg-[var(--secondary-color)] transition-colors">
+<input class="form-radio text-[var(--primary-color)] focus:ring-[var(--primary-color)]" name="gender" type="radio" value="groom"/>
+<span class="ml-3 text-sm font-medium text-[var(--text-primary)]">Groom</span>
+</label>
+</div>
+</div>
+<div>
+<label class="block text-sm font-medium text-[var(--text-primary)] mb-2">Account Type</label>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+<label class="flex items-center p-4 rounded-lg border border-[var(--border-color)] cursor-pointer hover:bg-[var(--secondary-color)] transition-colors">
+<input checked="" class="form-radio text-[var(--primary-color)] focus:ring-[var(--primary-color)]" name="account_type" type="radio" value="individual"/>
+<span class="ml-3 text-sm font-medium text-[var(--text-primary)]">Individual</span>
+</label>
+<label class="flex items-center p-4 rounded-lg border border-[var(--border-color)] cursor-pointer hover:bg-[var(--secondary-color)] transition-colors">
+<input class="form-radio text-[var(--primary-color)] focus:ring-[var(--primary-color)]" name="account_type" type="radio" value="family"/>
+<span class="ml-3 text-sm font-medium text-[var(--text-primary)]">Family</span>
+</label>
+<label class="flex items-center p-4 rounded-lg border border-[var(--border-color)] cursor-pointer hover:bg-[var(--secondary-color)] transition-colors">
+<input class="form-radio text-[var(--primary-color)] focus:ring-[var(--primary-color)]" name="account_type" type="radio" value="agent"/>
+<span class="ml-3 text-sm font-medium text-[var(--text-primary)]">Agent</span>
+</label>
+</div>
+</div>
+<div class="border-t border-[var(--border-color)] my-6"></div>
+<h3 class="text-lg font-semibold text-[var(--text-primary)]">Personal Information</h3>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div>
+<label class="block text-sm font-medium text-[var(--text-primary)] mb-2" for="name">Name</label>
+<input class="block w-full rounded-lg border border-[var(--border-color)] bg-[var(--secondary-color)] py-3 px-4 text-base text-[var(--text-primary)] placeholder:text-[var(--text-secondary)] focus:outline-none focus:ring-2 focus:ring-[var(--primary-color)] focus:border-[var(--primary-color)]" id="name" name="name" placeholder="Enter full name" required="" type="text"/>
+</div>
+<div>
+<label class="block text-sm font-medium text-[var(--text-primary)] mb-2" for="dob">Date of Birth</label>
+<input class="block w-full rounded-lg border border-[var(--border-color)] bg-[var(--secondary-color)] py-3 px-4 text-base text-[var(--text-primary)] placeholder:text-[var(--text-secondary)] focus:outline-none focus:ring-2 focus:ring-[var(--primary-color)] focus:border-[var(--primary-color)]" id="dob" name="dob" required="" type="date"/>
+</div>
+<div>
+<label class="block text-sm font-medium text-[var(--text-primary)] mb-2" for="religion">Religion</label>
+<select class="block w-full rounded-lg border border-[var(--border-color)] bg-[var(--secondary-color)] py-3 px-4 text-base text-[var(--text-primary)] focus:outline-none focus:ring-2 focus:ring-[var(--primary-color)] focus:border-[var(--primary-color)]" id="religion" name="religion" required="">
+<option selected="" value="">Select Religion</option>
+<option>Hindu</option>
+<option>Christian</option>
+<option>Muslim</option>
+<option>Jain</option>
+<option>Sikh</option>
+<option>Buddhist</option>
+<option>Other</option>
+</select>
+</div>
+<div>
+<label class="block text-sm font-medium text-[var(--text-primary)] mb-2" for="mother-tongue">Mother Tongue</label>
+<select class="block w-full rounded-lg border border-[var(--border-color)] bg-[var(--secondary-color)] py-3 px-4 text-base text-[var(--text-primary)] focus:outline-none focus:ring-2 focus:ring-[var(--primary-color)] focus:border-[var(--primary-color)]" id="mother-tongue" name="mother-tongue" required="">
+<option selected="" value="">Select Mother Tongue</option>
+<option>Tamil</option>
+<option>Telugu</option>
+<option>Malayalam</option>
+<option>Kannada</option>
+<option>Hindi</option>
+<option>English</option>
+</select>
+</div>
+</div>
+<div class="border-t border-[var(--border-color)] my-6"></div>
+<h3 class="text-lg font-semibold text-[var(--text-primary)]">Contact Details</h3>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div>
+<label class="block text-sm font-medium text-[var(--text-primary)] mb-2" for="email">Email Address</label>
+<input class="block w-full rounded-lg border border-[var(--border-color)] bg-[var(--secondary-color)] py-3 px-4 text-base text-[var(--text-primary)] placeholder:text-[var(--text-secondary)] focus:outline-none focus:ring-2 focus:ring-[var(--primary-color)] focus:border-[var(--primary-color)]" id="email" name="email" placeholder="Enter email address" required="" type="email"/>
+</div>
+<div>
+<label class="block text-sm font-medium text-[var(--text-primary)] mb-2" for="phone-number">Mobile Number</label>
+<div class="relative">
+<div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none text-sm text-[var(--text-secondary)]">+91</div>
+<input class="block w-full rounded-lg border border-[var(--border-color)] bg-[var(--secondary-color)] py-3 pl-12 pr-4 text-base text-[var(--text-primary)] placeholder:text-[var(--text-secondary)] focus:outline-none focus:ring-2 focus:ring-[var(--primary-color)] focus:border-[var(--primary-color)]" id="phone-number" name="phone-number" placeholder="Enter mobile number" required="" type="tel"/>
+</div>
+</div>
+</div>
+<div class="border-t border-[var(--border-color)] my-6"></div>
+<h3 class="text-lg font-semibold text-[var(--text-primary)]">Set Password</h3>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div>
+<label class="block text-sm font-medium text-[var(--text-primary)] mb-2" for="password">Create Password</label>
+<div class="relative">
+<input class="block w-full rounded-lg border border-[var(--border-color)] bg-[var(--secondary-color)] py-3 px-4 text-base text-[var(--text-primary)] placeholder:text-[var(--text-secondary)] focus:outline-none focus:ring-2 focus:ring-[var(--primary-color)] focus:border-[var(--primary-color)]" id="password" name="password" placeholder="Enter a strong password" required="" type="password"/>
+<button class="absolute inset-y-0 right-0 flex items-center pr-3 text-[var(--text-secondary)]" type="button">
+<span class="material-symbols-outlined text-xl">visibility_off</span>
+</button>
+</div>
+</div>
+<div>
+<label class="block text-sm font-medium text-[var(--text-primary)] mb-2" for="confirm-password">Confirm Password</label>
+<input class="block w-full rounded-lg border border-[var(--border-color)] bg-[var(--secondary-color)] py-3 px-4 text-base text-[var(--text-primary)] placeholder:text-[var(--text-secondary)] focus:outline-none focus:ring-2 focus:ring-[var(--primary-color)] focus:border-[var(--primary-color)]" id="confirm-password" name="confirm-password" placeholder="Re-enter your password" required="" type="password"/>
+</div>
+</div>
+<div class="pt-6">
+<button class="group relative flex w-full justify-center rounded-lg border border-transparent bg-[var(--primary-color)] py-3 px-4 text-base font-bold text-white shadow-sm hover:bg-opacity-90 focus:outline-none focus:ring-2 focus:ring-[var(--primary-color)] focus:ring-offset-2 transition-all" type="submit">
+                                Register Now
+                            </button>
+</div>
+</form>
+<p class="mt-6 text-center text-xs text-[var(--text-secondary)]">By proceeding, you agree to our <a class="font-medium text-[var(--primary-color)] hover:underline" href="#">Terms of Use</a> and <a class="font-medium text-[var(--primary-color)] hover:underline" href="#">Privacy Policy</a>.</p>
+</div>
+</div>
+</main>
+</div>
+
+</body></html>

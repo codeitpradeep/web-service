@@ -1,0 +1,183 @@
+<html><head>
+<link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
+<link as="style" href="https://fonts.googleapis.com/css2?display=swap&amp;family=Manrope%3Awght%40400%3B500%3B700%3B800&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900" onload="this.rel='stylesheet'" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<meta charset="utf-8"/>
+<title>Stitch Design</title>
+<link href="data:image/x-icon;base64," rel="icon" type="image/x-icon"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+</head>
+<body class="relative flex h-auto min-h-screen w-full flex-col bg-stone-50 group/design-root overflow-x-hidden" style="--select-button-svg: url('data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%2724px%27 height=%2724px%27 fill=%27rgb(154,99,76)%27 viewBox=%270 0 256 256%27%3e%3cpath d=%27M181.66,170.34a8,8,0,0,1,0,11.32l-48,48a8,8,0,0,1-11.32,0l-48-48a8,8,0,0,1,11.32-11.32L128,212.69l42.34-42.35A8,8,0,0,1,181.66,170.34Zm-96-84.68L128,43.31l42.34,42.35a8,8,0,0,0,11.32-11.32l-48-48a8,8,0,0,0-11.32,0l-48,48A8,8,0,0,0,85.66,85.66Z%27%3e%3c/path%3e%3c/svg%3e'); font-family: Manrope, &quot;Noto Sans&quot;, sans-serif;">
+<div class="layout-container flex h-full grow flex-col">
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-stone-200 px-10 py-4">
+<div class="flex items-center gap-8">
+<div class="flex items-center gap-3 text-stone-800">
+<svg class="h-8 w-8 text-[#ec5413]" fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_6_535)">
+<path clip-rule="evenodd" d="M47.2426 24L24 47.2426L0.757355 24L24 0.757355L47.2426 24ZM12.2426 21H35.7574L24 9.24264L12.2426 21Z" fill="currentColor" fill-rule="evenodd"></path>
+</g>
+<defs>
+<clipPath id="clip0_6_535"><rect fill="white" height="48" width="48"></rect></clipPath>
+</defs>
+</svg>
+<h2 class="text-xl font-bold leading-tight tracking-[-0.015em] text-stone-800">Tamil Matrimony</h2>
+</div>
+<nav class="flex items-center gap-8">
+<a class="text-sm font-medium leading-normal text-stone-800 hover:text-[#ec5413]" href="#">Home</a>
+<a class="text-sm font-medium leading-normal text-stone-800 hover:text-[#ec5413]" href="#">Matches</a>
+<a class="text-sm font-bold leading-normal text-[#ec5413] hover:text-[#ec5413]" href="#">Search</a>
+<a class="text-sm font-medium leading-normal text-stone-800 hover:text-[#ec5413]" href="#">Premium</a>
+</nav>
+</div>
+<div class="flex items-center justify-end gap-4">
+<button class="flex h-10 w-10 cursor-pointer items-center justify-center overflow-hidden rounded-full bg-stone-100 text-stone-800 transition-colors hover:bg-stone-200">
+<span class="material-symbols-outlined text-2xl"> search </span>
+</button>
+<button class="flex h-10 w-10 cursor-pointer items-center justify-center overflow-hidden rounded-full bg-stone-100 text-stone-800 transition-colors hover:bg-stone-200">
+<span class="material-symbols-outlined text-2xl"> notifications </span>
+</button>
+<button class="h-12 w-12 rounded-full bg-cover bg-center bg-no-repeat" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAV5UbcleWNF1MfaVsNMlY18epg4-KLn2jCuZUTUz-AvLZHXK4hajgheCoFMlN1BD6zis8_Sv9solUBLptg8e4wIQjnc9cEvMAyDzrMylv9jhs4OoyhozbCC2YHZ3EJCjTs8hceauBmdByj_AIME8zl16CK3eMMiTD5a6zpKTdcLYotdII0-OkHBo0o56eUBaG_A1ExHE6Z919u5VRahPJpUQqSPyVm2RVyyvmGJt0DdBaALqg_xTIq7CPWoHZVEN7cBuOUDDcstIZ6");'></button>
+</div>
+</header>
+<main class="flex flex-1 gap-8 p-8">
+<aside class="w-80 flex-shrink-0 rounded-lg border border-stone-200 bg-white p-6 shadow-sm">
+<h2 class="text-xl font-bold leading-tight tracking-[-0.015em] text-stone-800">Filters</h2>
+<div class="mt-6 flex flex-col gap-6">
+<div class="flex flex-col gap-2">
+<label class="text-sm font-medium text-stone-800" for="age-range">Age Range</label>
+<div class="relative pt-1">
+<input class="w-full" id="age-range" max="60" min="18" type="range" value="25,45"/>
+<div class="mt-2 flex justify-between text-xs text-stone-500">
+<span>18</span>
+<span>60</span>
+</div>
+</div>
+</div>
+<div class="flex flex-col gap-2">
+<label class="text-sm font-medium text-stone-800" for="location">Location</label>
+<select class="form-select w-full rounded-md border-stone-300 bg-stone-50 text-sm focus:border-[#ec5413] focus:ring-[#ec5413]" id="location">
+<option>Any</option>
+<option>Chennai</option>
+<option>Coimbatore</option>
+<option>Madurai</option>
+</select>
+</div>
+<div class="flex flex-col gap-2">
+<label class="text-sm font-medium text-stone-800" for="religion">Religion</label>
+<select class="form-select w-full rounded-md border-stone-300 bg-stone-50 text-sm focus:border-[#ec5413] focus:ring-[#ec5413]" id="religion">
+<option>Any</option>
+<option>Hindu</option>
+<option>Christian</option>
+<option>Muslim</option>
+</select>
+</div>
+<div class="flex flex-col gap-2">
+<label class="text-sm font-medium text-stone-800" for="caste">Caste</label>
+<select class="form-select w-full rounded-md border-stone-300 bg-stone-50 text-sm focus:border-[#ec5413] focus:ring-[#ec5413]" id="caste">
+<option>Any</option>
+<option>Vellalar</option>
+<option>Gounder</option>
+<option>Nadar</option>
+</select>
+</div>
+</div>
+<button class="mt-8 w-full cursor-pointer rounded-md bg-[#ec5413] py-2.5 text-sm font-bold text-white shadow-sm transition-colors hover:bg-orange-600">
+            Apply Filters
+          </button>
+</aside>
+<div class="flex-1">
+<div class="flex items-center justify-between">
+<div>
+<h1 class="text-3xl font-bold leading-tight tracking-tight text-stone-800">Search Results</h1>
+<p class="mt-1 text-sm text-stone-500">Showing 1-12 of 1,234 results</p>
+</div>
+<div class="flex items-center gap-2">
+<button class="flex items-center gap-2 rounded-md border border-stone-200 bg-white px-3 py-2 text-sm font-medium text-stone-800 shadow-sm hover:bg-stone-50">
+<span class="material-symbols-outlined text-xl"> sort </span>
+                Sort by
+              </button>
+<button class="flex items-center gap-2 rounded-md border border-stone-200 bg-white px-3 py-2 text-sm font-medium text-stone-800 shadow-sm hover:bg-stone-50">
+<span class="material-symbols-outlined text-xl"> bookmark_add </span>
+                Save Search
+              </button>
+</div>
+</div>
+<div class="mt-6 grid grid-cols-[repeat(auto-fit,minmax(220px,1fr))] gap-6">
+<div class="group relative overflow-hidden rounded-lg border border-stone-200 bg-white shadow-sm transition-all hover:shadow-md">
+<div class="h-64 w-full bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBh-gHzqa4DoeDs9r7q6--KelQAR0OGbSpffw9a_pfytAF2TRqgHlY4Ee2jCaAP8Ruospdi9Bug41Hrr1rv27Ezqq-nwBtKoRql0IWZMG4vnj68Eot82-BB9Qdk7_6Oc2IEMiAaIpZuJSGjFpVesg8d-1j_FF6Pj-Us19gonDPSavZJHEmktfFWVonAM5Yba22wc2OpQC5G7ofwghqh6R4RSiAf6mXK8jnlV_6yKfjVzjQ-XX69qMsb6C_bYVqDAXplvhtE2OMZuIcQ");'></div>
+<div class="p-4">
+<h3 class="text-lg font-bold text-stone-800">Priya, 28</h3>
+<p class="text-sm text-stone-500">Software Engineer, Chennai</p>
+</div>
+<div class="absolute inset-0 flex translate-y-full items-center justify-center bg-black/40 opacity-0 transition-all group-hover:translate-y-0 group-hover:opacity-100">
+<button class="rounded-full bg-[#ec5413] px-4 py-2 text-sm font-bold text-white transition-transform hover:scale-105">
+                  View Profile
+                </button>
+</div>
+</div>
+<div class="group relative overflow-hidden rounded-lg border border-stone-200 bg-white shadow-sm transition-all hover:shadow-md">
+<div class="h-64 w-full bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuB2fYIsN_oF09RXgGHJkJMI1_mtQfsf75w3-d-rB89K6Qp7IC-c4Uz5Uz67RS_q9W8nrv8tsUzz5jxxmuhBCgMgYhpmItleL6EdDmIUq1OpwdJ6rsQAyWQXbd2RyCTAV5QLtN1gZFBHRytZvA6ghzZ8H02nAtxEq-T_QDuQY9_O52zLDX8mVacol_kIo1oSGuE8RhpNxebs4tXZw8C6DUM909PnHKw-DfLRonUgmVbkUVUUWMrUOMYbN-vg7rvCHCughk4FIvoVJyxd");'></div>
+<div class="p-4">
+<h3 class="text-lg font-bold text-stone-800">Meena, 32</h3>
+<p class="text-sm text-stone-500">Teacher, Madurai</p>
+</div>
+<div class="absolute inset-0 flex translate-y-full items-center justify-center bg-black/40 opacity-0 transition-all group-hover:translate-y-0 group-hover:opacity-100">
+<button class="rounded-full bg-[#ec5413] px-4 py-2 text-sm font-bold text-white transition-transform hover:scale-105">
+                  View Profile
+                </button>
+</div>
+</div>
+<div class="group relative overflow-hidden rounded-lg border border-stone-200 bg-white shadow-sm transition-all hover:shadow-md">
+<div class="h-64 w-full bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBX2HcHU8f3m5JYcmVMD_4R4_ykySCMaHUvR6wVfHr3VvE0L8tY4Y6d0d7rYmlHOTvWyKC8Laq5f2zWD68lX1f5G6UO0xJg1Wu_fEWYj-aW-Dq55lmLplPR-tA-_l0lnX_FISk1HwQrevOoW5d3Fx1261fxhrVeVCO62qDWoIh3CQYablBddtcuO2GWc5URa1IiKHRVCkP_OFjn3yt64StI_qhFsqGurzLYYnG_1PwHuY8W4hnGgzOBwOc2CdIYan9xND9SAEbHx76q");'></div>
+<div class="p-4">
+<h3 class="text-lg font-bold text-stone-800">Lakshmi, 25</h3>
+<p class="text-sm text-stone-500">Doctor, Coimbatore</p>
+</div>
+<div class="absolute inset-0 flex translate-y-full items-center justify-center bg-black/40 opacity-0 transition-all group-hover:translate-y-0 group-hover:opacity-100">
+<button class="rounded-full bg-[#ec5413] px-4 py-2 text-sm font-bold text-white transition-transform hover:scale-105">
+                  View Profile
+                </button>
+</div>
+</div>
+<div class="group relative overflow-hidden rounded-lg border border-stone-200 bg-white shadow-sm transition-all hover:shadow-md">
+<div class="h-64 w-full bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAZBF15y4jy37n0tC_MVhNralLQipG8XsSEa9mvO-FHRhOH_m5O3yxaU5-mRg4DWZ6vby81x2eodUYruSwql8yu1ABz5BC7YOl3sTg6uiGeoiI9b8_R5jIUzji76eqHosGyW2cuv1vURcNGsioNaoKzBtsiFuFnXQwSiAOjQ7_p8ldfYJaTlSHjZEPDnfL06qbfwsNpyrg_tDnX_acXar2r8jMb-esSxI_MA-Ed5K5G90wWs9InMympjKdRpyEWnFCRLFWjGqFslnlE");'></div>
+<div class="p-4">
+<h3 class="text-lg font-bold text-stone-800">Deepa, 30</h3>
+<p class="text-sm text-stone-500">Bank Employee, Salem</p>
+</div>
+<div class="absolute inset-0 flex translate-y-full items-center justify-center bg-black/40 opacity-0 transition-all group-hover:translate-y-0 group-hover:opacity-100">
+<button class="rounded-full bg-[#ec5413] px-4 py-2 text-sm font-bold text-white transition-transform hover:scale-105">
+                  View Profile
+                </button>
+</div>
+</div>
+<div class="group relative overflow-hidden rounded-lg border border-stone-200 bg-white shadow-sm transition-all hover:shadow-md">
+<div class="h-64 w-full bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBXNWWGKHQPEK-bk3cJgxKbgPtXezculEVGccqQ07lNi1IPx4SsMsuh8nzdJdGni41MttUvK1c_Jdbcc59y7T9nPrK8k0JKeZph55lOe4b-9wmTbbhIp_y7w67qKQOwQIvcB9EEO3erYdKuO7qb3yffX7uhCk00Boce4kN66kVpw8sKRjVxnhbluVRz5vabfMJvW_Z66jtTJW0JOpuGDAarDvOLYnN2f3kLAAi6k3wuVLl9_nGcd4R7jDCZxPHh0pV4Jmv_n_QE3bdg");'></div>
+<div class="p-4">
+<h3 class="text-lg font-bold text-stone-800">Sita, 27</h3>
+<p class="text-sm text-stone-500">Lecturer, Trichy</p>
+</div>
+<div class="absolute inset-0 flex translate-y-full items-center justify-center bg-black/40 opacity-0 transition-all group-hover:translate-y-0 group-hover:opacity-100">
+<button class="rounded-full bg-[#ec5413] px-4 py-2 text-sm font-bold text-white transition-transform hover:scale-105">
+                  View Profile
+                </button>
+</div>
+</div>
+<div class="group relative overflow-hidden rounded-lg border border-stone-200 bg-white shadow-sm transition-all hover:shadow-md">
+<div class="h-64 w-full bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBivnvX6qCSNKANjQUlQiRFyTLKa6aNGbcp0-gBk-ZU7Hxk_YddAqrxTkLdJHPvHxVIJ-y_puZmPBT0VaG7w9aXXkGci1UDflYoDJOFHR7cl7r7lNj-Qxnj6VdPNYWpiksOiF1uRhNu11Y2mn5Jj8GVboJaWZihU4L8GJY6H9Nt27YLflujHh4hzXAmm4lSi8jbIhW9sseezrXVsLGxm3U38rSA_MtHsty29lGHUmAzBdrcVGwI5i7l019fnOa39VYGC8JfOPwgMl3F");'></div>
+<div class="p-4">
+<h3 class="text-lg font-bold text-stone-800">Radha, 31</h3>
+<p class="text-sm text-stone-500">Nurse, Tirunelveli</p>
+</div>
+<div class="absolute inset-0 flex translate-y-full items-center justify-center bg-black/40 opacity-0 transition-all group-hover:translate-y-0 group-hover:opacity-100">
+<button class="rounded-full bg-[#ec5413] px-4 py-2 text-sm font-bold text-white transition-transform hover:scale-105">
+                  View Profile
+                </button>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+
+</body></html>

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
+<link as="style" href="https://fonts.googleapis.com/css2?display=swap&amp;family=Manrope%3Awght%40400%3B500%3B700%3B800&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900" onload="this.rel='stylesheet'" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<title>Stitch Design</title>
+<link href="data:image/x-icon;base64," rel="icon" type="image/x-icon"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<style type="text/tailwindcss">
+      :root {
+        --primary-color: #ec5413;
+      }
+    </style>
+</head>
+<body>
+<div class="relative flex h-auto min-h-screen w-full flex-col bg-gray-50 group/design-root overflow-x-hidden" style='font-family: Manrope, "Noto Sans", sans-serif;'>
+<div class="flex h-full grow flex-col">
+<div class="flex flex-1">
+<aside class="flex flex-col w-64 bg-white border-r border-gray-200 p-4">
+<div class="flex flex-col gap-8">
+<h1 class="text-gray-900 text-xl font-bold px-3">Admin Panel</h1>
+<nav class="flex flex-col gap-2">
+<a class="flex items-center gap-3 px-3 py-2 rounded-md text-gray-500 hover:bg-gray-100 hover:text-gray-900 transition-colors" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+<p class="text-sm font-medium">Dashboard</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-md text-gray-500 hover:bg-gray-100 hover:text-gray-900 transition-colors" href="#">
+<span class="material-symbols-outlined">person_add</span>
+<p class="text-sm font-medium">New Profiles</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-md bg-[var(--primary-color)] text-white" href="#">
+<span class="material-symbols-outlined">group</span>
+<p class="text-sm font-medium">Manage Profiles</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-md text-gray-500 hover:bg-gray-100 hover:text-gray-900 transition-colors" href="#">
+<span class="material-symbols-outlined">how_to_reg</span>
+<p class="text-sm font-medium">Approved Profiles</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-md text-gray-500 hover:bg-gray-100 hover:text-gray-900 transition-colors" href="#">
+<span class="material-symbols-outlined">person_off</span>
+<p class="text-sm font-medium">Rejected Profiles</p>
+</a>
+</nav>
+</div>
+<div class="mt-auto">
+<a class="flex items-center gap-3 px-3 py-2 rounded-md text-gray-500 hover:bg-gray-100 hover:text-gray-900 transition-colors" href="#">
+<span class="material-symbols-outlined">settings</span>
+<p class="text-sm font-medium">Settings</p>
+</a>
+</div>
+</aside>
+<main class="flex-1 p-8 bg-gray-50">
+<header class="mb-8 flex items-center justify-between">
+<div>
+<h2 class="text-3xl font-bold text-gray-900">Manage User Profiles</h2>
+<p class="text-gray-500 mt-1">Create, view, and edit user profiles.</p>
+</div>
+<button class="flex items-center gap-2 px-4 py-2 text-sm font-medium text-white bg-[var(--primary-color)] rounded-md hover:bg-orange-600 focus:ring-4 focus:outline-none focus:ring-orange-300">
+<span class="material-symbols-outlined">add</span>
+              Create New Profile
+            </button>
+</header>
+<div class="bg-white p-6 rounded-lg border border-gray-200">
+<h3 class="text-xl font-semibold text-gray-900 mb-6">Edit Profile: Priya S. (TN2024001)</h3>
+<form action="#" method="POST">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-6">
+<div class="md:col-span-2">
+<h4 class="text-lg font-medium text-gray-800 border-b pb-2 mb-4">Basic Information</h4>
+</div>
+<div>
+<label class="block text-sm font-medium text-gray-700" for="fullName">Full Name</label>
+<input class="mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-orange-500 focus:border-orange-500 sm:text-sm" id="fullName" name="fullName" type="text" value="Priya S."/>
+</div>
+<div>
+<label class="block text-sm font-medium text-gray-700" for="gender">Gender</label>
+<select class="mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-orange-500 focus:border-orange-500 sm:text-sm" id="gender" name="gender">
+<option>Female</option>
+<option>Male</option>
+</select>
+</div>
+<div>
+<label class="block text-sm font-medium text-gray-700" for="dob">Date of Birth</label>
+<input class="mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-orange-500 focus:border-orange-500 sm:text-sm" id="dob" name="dob" type="date" value="1996-05-15"/>
+</div>
+<div>
+<label class="block text-sm font-medium text-gray-700" for="motherTongue">Mother Tongue</label>
+<input class="mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-orange-500 focus:border-orange-500 sm:text-sm" id="motherTongue" name="motherTongue" type="text" value="Tamil"/>
+</div>
+<div class="md:col-span-2 mt-6">
+<h4 class="text-lg font-medium text-gray-800 border-b pb-2 mb-4">Religious &amp; Social Background</h4>
+</div>
+<div>
+<label class="block text-sm font-medium text-gray-700" for="religion">Religion</label>
+<input class="mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-orange-500 focus:border-orange-500 sm:text-sm" id="religion" name="religion" type="text" value="Hindu"/>
+</div>
+<div>
+<label class="block text-sm font-medium text-gray-700" for="caste">Caste / Community</label>
+<input class="mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-orange-500 focus:border-orange-500 sm:text-sm" id="caste" name="caste" type="text" value="Nadar"/>
+</div>
+<div>
+<label class="block text-sm font-medium text-gray-700" for="subCaste">Sub-caste</label>
+<input class="mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-orange-500 focus:border-orange-500 sm:text-sm" id="subCaste" name="subCaste" type="text" value="Gramani"/>
+</div>
+<div>
+<label class="block text-sm font-medium text-gray-700" for="gothram">Gothram</label>
+<input class="mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-orange-500 focus:border-orange-500 sm:text-sm" id="gothram" name="gothram" type="text" value="Shiva"/>
+</div>
+<div class="md:col-span-2 mt-6">
+<h4 class="text-lg font-medium text-gray-800 border-b pb-2 mb-4">Location</h4>
+</div>
+<div>
+<label class="block text-sm font-medium text-gray-700" for="country">Country</label>
+<input class="mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-orange-500 focus:border-orange-500 sm:text-sm" id="country" name="country" type="text" value="India"/>
+</div>
+<div>
+<label class="block text-sm font-medium text-gray-700" for="state">State</label>
+<input class="mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-orange-500 focus:border-orange-500 sm:text-sm" id="state" name="state" type="text" value="Tamil Nadu"/>
+</div>
+<div>
+<label class="block text-sm font-medium text-gray-700" for="city">City</label>
+<input class="mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-orange-500 focus:border-orange-500 sm:text-sm" id="city" name="city" type="text" value="Chennai"/>
+</div>
+<div class="md:col-span-2 mt-6">
+<h4 class="text-lg font-medium text-gray-800 border-b pb-2 mb-4">Professional &amp; Educational Background</h4>
+</div>
+<div>
+<label class="block text-sm font-medium text-gray-700" for="education">Highest Education</label>
+<input class="mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-orange-500 focus:border-orange-500 sm:text-sm" id="education" name="education" type="text" value="B.E. Computer Science"/>
+</div>
+<div>
+<label class="block text-sm font-medium text-gray-700" for="occupation">Occupation</label>
+<input class="mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-orange-500 focus:border-orange-500 sm:text-sm" id="occupation" name="occupation" type="text" value="Software Engineer"/>
+</div>
+<div class="md:col-span-2">
+<label class="block text-sm font-medium text-gray-700" for="annualIncome">Annual Income</label>
+<input class="mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-orange-500 focus:border-orange-500 sm:text-sm" id="annualIncome" name="annualIncome" type="text" value="₹ 12,00,000"/>
+</div>
+<div class="md:col-span-2 mt-6">
+<h4 class="text-lg font-medium text-gray-800 border-b pb-2 mb-4">About Me</h4>
+<label class="block text-sm font-medium text-gray-700" for="about">Write a few words about yourself</label>
+<textarea class="mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-orange-500 focus:border-orange-500 sm:text-sm" id="about" name="about" rows="4">I am a fun-loving and ambitious person. I enjoy coding, reading books, and exploring new places. Looking for a partner who is understanding and supportive.</textarea>
+</div>
+</div>
+<div class="mt-8 pt-5 border-t border-gray-200">
+<div class="flex justify-end gap-3">
+<button class="px-4 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-md shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-orange-500" type="button">
+                    Cancel
+                  </button>
+<button class="px-4 py-2 text-sm font-medium text-white bg-green-600 border border-transparent rounded-md shadow-sm hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500" type="submit">
+                    Save Changes
+                  </button>
+<button class="px-4 py-2 text-sm font-medium text-white bg-red-600 border border-transparent rounded-md shadow-sm hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500" type="button">
+                    Delete Profile
+                  </button>
+</div>
+</div>
+</form>
+</div>
+</main>
+</div>
+</div>
+</div>
+
+</body></html>
