@@ -328,7 +328,7 @@ class _ProfileViewPageState extends State<ProfileViewPage>
 
   Widget _buildBasicDetails() {
     return _buildDetailSection(
-      title: 'About ${widget.profile.name}',
+      title: 'About ${widget.profile.name} - ${widget.profile.mobileNumber}',
       content: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -367,7 +367,8 @@ class _ProfileViewPageState extends State<ProfileViewPage>
                           builder: (context) => AlertDialog(
                             title: const Text('Download Limit Reached'),
                             content: const Text(
-                                'You have reached your weekly limit of 5 downloads.'),
+                              'You have reached your weekly limit of 5 downloads.',
+                            ),
                             actions: [
                               TextButton(
                                 onPressed: () => Navigator.pop(context),
@@ -396,10 +397,10 @@ class _ProfileViewPageState extends State<ProfileViewPage>
                       await Supabase.instance.client
                           .from('profile_downloads')
                           .insert({
-                        'user_id': user.id,
-                        'profile_id': widget.profile.id,
-                        'download_type': 'horoscope',
-                      });
+                            'user_id': user.id,
+                            'profile_id': widget.profile.id,
+                            'download_type': 'horoscope',
+                          });
                     } else {
                       throw Exception(
                         'Failed to download file: ${response.statusCode}',
