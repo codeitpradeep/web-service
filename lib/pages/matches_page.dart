@@ -71,9 +71,14 @@ class _MatchesPageState extends State<MatchesPage> {
         nachathram: data['nachathram'],
         dosham: data['dosham'],
         caste: data['caste'],
-        photos: [data['profile_picture'] ?? 'https://picsum.photos/150'],
+        photos: [
+          data['profile_picture'] ??
+              'https://dummyimage.com/150x150/B01B5B/B01B5B.png',
+        ],
         dateOfBirth: dob,
-        profilePicture: data['profile_picture'] ?? 'https://picsum.photos/150',
+        profilePicture:
+            data['profile_picture'] ??
+            'https://dummyimage.com/150x150/B01B5B/B01B5B.png',
         mobileNumber: data['mobile_number'],
         email: data['email'],
         gender: data['gender'],
@@ -137,10 +142,14 @@ class _MatchesPageState extends State<MatchesPage> {
           nachathram: data['nachathram'],
           dosham: data['dosham'],
           caste: data['caste'],
-          photos: [data['profile_picture'] ?? 'https://picsum.photos/150'],
+          photos: [
+            data['profile_picture'] ??
+                'https://dummyimage.com/150x150/B01B5B/B01B5B.png',
+          ],
           dateOfBirth: dob,
           profilePicture:
-              data['profile_picture'] ?? 'https://picsum.photos/150',
+              data['profile_picture'] ??
+              'https://dummyimage.com/150x150/B01B5B/B01B5B.png',
           mobileNumber: data['mobile_number'],
           email: data['email'],
           gender: data['gender'],
@@ -368,7 +377,8 @@ class _MatchesPageState extends State<MatchesPage> {
                                 builder: (context) => AlertDialog(
                                   title: const Text('Pending Approval'),
                                   content: const Text(
-                                      'Your profile is currently pending approval. You cannot view other profiles until it is approved.'),
+                                    'Please Contact : 1111111111 Your profile is currently pending approval. You cannot view other profiles until it is approved.',
+                                  ),
                                   actions: [
                                     TextButton(
                                       onPressed: () => Navigator.pop(context),

@@ -180,7 +180,7 @@ class AppHeader extends StatelessWidget implements PreferredSizeWidget {
                         child: const CircleAvatar(
                           radius: 20,
                           backgroundImage: NetworkImage(
-                            "https://picsum.photos/150",
+                            "https://dummyimage.com/150x150/B01B5B/B01B5B.png",
                           ), // Placeholder avatar
                         ),
                       ),

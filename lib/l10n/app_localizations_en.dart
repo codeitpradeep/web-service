@@ -583,7 +583,7 @@ class AppLocalizationsEn extends AppLocalizations {
   String get password => 'Password';
 
   @override
-  String get forgotYourPassword => 'Forgot your password?';
+  String get forgotYourPassword => 'Forgot your password? Contact: 1111111111';
 
   @override
   String get dontHaveAnAccount => 'Don\'t have an account?';
