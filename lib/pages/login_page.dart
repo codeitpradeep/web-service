@@ -154,9 +154,7 @@ class _LoginPageState extends State<LoginPage> {
                     Align(
                       alignment: Alignment.centerRight,
                       child: TextButton(
-                        onPressed: () {
-                          // TODO: Implement forgot password logic
-                        },
+                        onPressed: _showForgotPasswordDialog,
                         child: Text(
                           appLocalizations.forgotYourPassword,
                           style: AppTextStyles.bodyText.copyWith(
@@ -220,6 +218,22 @@ class _LoginPageState extends State<LoginPage> {
             ),
           ),
         ),
+      ),
+    );
+  }
+
+  Future<void> _showForgotPasswordDialog() {
+    return showDialog<void>(
+      context: context,
+      builder: (context) => AlertDialog(
+        title: const Text('Forgot Password'),
+        content: const Text('Please contact Admin: 1111111111.'),
+        actions: [
+          TextButton(
+            onPressed: () => Navigator.of(context).pop(),
+            child: const Text('OK'),
+          ),
+        ],
       ),
     );
   }
