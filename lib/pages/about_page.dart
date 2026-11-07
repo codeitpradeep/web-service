@@ -13,7 +13,7 @@ class AboutPage extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(
-            'Welcome to Tamil Matrimony, your trusted platform for finding life partners within the Tamil-speaking community worldwide. Our mission is to provide a secure and user-friendly environment where individuals can connect, communicate, and build meaningful relationships leading to successful marriages.',
+            'Welcome to Tiruppur Kulalar Matrimony, your trusted platform for finding life partners within the Tamil-speaking community worldwide. Our mission is to provide a secure and user-friendly environment where individuals can connect, communicate, and build meaningful relationships leading to successful marriages.',
             style: AppTextStyles.bodyText.copyWith(color: AppColors.textColor),
           ),
           const SizedBox(height: 16),
@@ -24,15 +24,26 @@ class AboutPage extends StatelessWidget {
           const SizedBox(height: 24),
           Text(
             'Our Commitment:',
-            style: AppTextStyles.cardTitle.copyWith(fontWeight: FontWeight.w600),
+            style: AppTextStyles.cardTitle.copyWith(
+              fontWeight: FontWeight.w600,
+            ),
           ),
           const SizedBox(height: 8),
-          _buildBulletPoint('Authenticity', 'We verify profiles to ensure genuine connections.'),
-          _buildBulletPoint('Privacy', 'Your data and communications are protected with advanced security measures.'),
-          _buildBulletPoint('Support', 'Our customer support team is always here to assist you.'),
+          _buildBulletPoint(
+            'Authenticity',
+            'We verify profiles to ensure genuine connections.',
+          ),
+          _buildBulletPoint(
+            'Privacy',
+            'Your data and communications are protected with advanced security measures.',
+          ),
+          _buildBulletPoint(
+            'Support',
+            'Our customer support team is always here to assist you.',
+          ),
           const SizedBox(height: 24),
           Text(
-            'Thank you for choosing Tamil Matrimony. We wish you the very best in your search!',
+            'Thank you for choosing Tiruppur Kulalar Matrimony. We wish you the very best in your search!',
             style: AppTextStyles.bodyText.copyWith(color: AppColors.textColor),
           ),
         ],
@@ -46,7 +57,11 @@ class AboutPage extends StatelessWidget {
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Icon(Icons.check_circle_outline, size: 20, color: AppColors.primary500), // Checkmark icon
+          Icon(
+            Icons.check_circle_outline,
+            size: 20,
+            color: AppColors.primary500,
+          ), // Checkmark icon
           const SizedBox(width: 8),
           Expanded(
             child: Column(
@@ -54,11 +69,15 @@ class AboutPage extends StatelessWidget {
               children: [
                 Text(
                   title,
-                  style: AppTextStyles.bodyText.copyWith(fontWeight: FontWeight.w600),
+                  style: AppTextStyles.bodyText.copyWith(
+                    fontWeight: FontWeight.w600,
+                  ),
                 ),
                 Text(
                   description,
-                  style: AppTextStyles.bodyText.copyWith(color: AppColors.secondary700),
+                  style: AppTextStyles.bodyText.copyWith(
+                    color: AppColors.secondary700,
+                  ),
                 ),
               ],
             ),
@@ -68,5 +87,3 @@ class AboutPage extends StatelessWidget {
     );
   }
 }
-
-

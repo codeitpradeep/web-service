@@ -101,7 +101,7 @@ abstract class AppLocalizations {
   /// The title of the application
   ///
   /// In en, this message translates to:
-  /// **'Tamil Matrimony'**
+  /// **'Tiruppur Kulalar Matrimony'**
   String get appTitle;
 
   /// Text for the hero section headline
@@ -197,7 +197,7 @@ abstract class AppLocalizations {
   /// Copyright text in the footer
   ///
   /// In en, this message translates to:
-  /// **'© 2024 Tamil Matrimony. All rights reserved.'**
+  /// **'© 2025 Tiruppur Kulalar Matrimony. All rights reserved.'**
   String get copyrightText;
 
   /// Footer link text for About Us
@@ -263,7 +263,7 @@ abstract class AppLocalizations {
   /// Subtitle for Register page
   ///
   /// In en, this message translates to:
-  /// **'Join the largest Tamil matrimonial service and find your perfect match.'**
+  /// **'Join the largest Tiruppur Kulalar matrimonial service and find your perfect match.'**
   String get joinTheLargestTamilMatrimonial;
 
   /// Label for profile type selection
@@ -905,7 +905,7 @@ abstract class AppLocalizations {
   /// Privacy Policy section content: Introduction
   ///
   /// In en, this message translates to:
-  /// **'Welcome to Tamil Matrimony. We are committed to protecting your privacy and personal information. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website.'**
+  /// **'Welcome to Tiruppur Kulalar Matrimony. We are committed to protecting your privacy and personal information. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website.'**
   String get introductionContent;
 
   /// Privacy Policy section title: Information We Collect
@@ -1007,7 +1007,7 @@ abstract class AppLocalizations {
   /// Terms & Conditions section content: Acceptance of Terms
   ///
   /// In en, this message translates to:
-  /// **'By accessing and using Tamil Matrimony, you agree to be bound by these Terms and Conditions and all applicable laws and regulations. If you do not agree with any of these terms, you are prohibited from using or accessing this site.'**
+  /// **'By accessing and using Tiruppur Kulalar Matrimony, you agree to be bound by these Terms and Conditions and all applicable laws and regulations. If you do not agree with any of these terms, you are prohibited from using or accessing this site.'**
   String get acceptanceOfTermsContent;
 
   /// Terms & Conditions section title: Eligibility

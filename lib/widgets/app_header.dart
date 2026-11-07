@@ -16,7 +16,7 @@ class AppHeader extends StatelessWidget implements PreferredSizeWidget {
 
   const AppHeader({
     super.key,
-    this.titleText = 'Tamil Matrimony',
+    this.titleText = 'TiruppurKulalarMatrimony',
     required this.isLoggedIn,
     this.onLoginPressed,
     this.onRegisterPressed,
@@ -32,7 +32,8 @@ class AppHeader extends StatelessWidget implements PreferredSizeWidget {
   Widget build(BuildContext context) {
     final bool showAuthButtons = !isLoggedIn;
     final bool showProfileAvatar = isLoggedIn;
-    final List<String> finalNavLinks = navLinks ??
+    final List<String> finalNavLinks =
+        navLinks ??
         (isLoggedIn
             ? ['My Profile', 'Matches', 'Search', 'Messages']
             : ['Home', 'Search', 'Help']);

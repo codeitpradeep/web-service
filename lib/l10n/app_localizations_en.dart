@@ -9,7 +9,7 @@ class AppLocalizationsEn extends AppLocalizations {
   AppLocalizationsEn([String locale = 'en']) : super(locale);
 
   @override
-  String get appTitle => 'Tamil Matrimony';
+  String get appTitle => 'Tiruppur Kulalar Matrimony';
 
   @override
   String get findYourPerfectMatch => 'Find Your Perfect Match';
@@ -63,7 +63,8 @@ class AppLocalizationsEn extends AppLocalizations {
       'Initiate conversations, get to know each other, and take the first step towards a happy marriage.';
 
   @override
-  String get copyrightText => '© 2024 Tamil Matrimony. All rights reserved.';
+  String get copyrightText =>
+      '© 2025 Tiruppur Kulalar Matrimony. All rights reserved.';
 
   @override
   String get aboutUs => 'About Us';
@@ -97,7 +98,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get joinTheLargestTamilMatrimonial =>
-      'Join the largest Tamil matrimonial service and find your perfect match.';
+      'Join the largest Tiruppur Kulalar matrimonial service and find your perfect match.';
 
   @override
   String get thisProfileIsForA => 'This profile is for a';
@@ -428,7 +429,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get introductionContent =>
-      'Welcome to Tamil Matrimony. We are committed to protecting your privacy and personal information. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website.';
+      'Welcome to Tiruppur Kulalar Matrimony. We are committed to protecting your privacy and personal information. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website.';
 
   @override
   String get informationWeCollect => '2. Information We Collect';
@@ -487,7 +488,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get acceptanceOfTermsContent =>
-      'By accessing and using Tamil Matrimony, you agree to be bound by these Terms and Conditions and all applicable laws and regulations. If you do not agree with any of these terms, you are prohibited from using or accessing this site.';
+      'By accessing and using Tiruppur Kulalar Matrimony, you agree to be bound by these Terms and Conditions and all applicable laws and regulations. If you do not agree with any of these terms, you are prohibited from using or accessing this site.';
 
   @override
   String get eligibility => '2. Eligibility';

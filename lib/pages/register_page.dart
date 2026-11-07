@@ -79,7 +79,7 @@ class _RegisterPageState extends State<RegisterPage> {
                     ),
                     const SizedBox(height: 8),
                     Text(
-                      'Join the largest Tamil matrimonial service and find your perfect match.',
+                      'Join the largest Tiruppur Kulalar matrimonial service and find your perfect match.',
                       style: AppTextStyles.sectionSubtitle.copyWith(
                         color: AppColors.secondary700,
                       ), // mt-2 text-sm text-[var(--text-secondary)]

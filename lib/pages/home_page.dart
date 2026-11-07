@@ -697,7 +697,7 @@ class _HomePageState extends State<HomePage> {
                         ), // gap between links and copyright on large screens, gap-y-2 on small
                         // Copyright Text
                         Text(
-                          '© 2024 Tamil Matrimony. All rights reserved.',
+                          '© 2025 Tiruppur Kulalar Matrimony. All rights reserved.',
                           style: AppTextStyles.footerText,
                         ),
                       ],

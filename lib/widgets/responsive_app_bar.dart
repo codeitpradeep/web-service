@@ -7,7 +7,7 @@ class ResponsiveAppBar extends StatelessWidget implements PreferredSizeWidget {
   @override
   Widget build(BuildContext context) {
     return AppBar(
-      title: const Text('Tamil Matrimony'),
+      title: const Text('TiruppurKulalarMatrimony'),
       // Show a hamburger icon on mobile
       leading: ResponsiveLayout.isMobile(context)
           ? Builder(
