@@ -26,9 +26,18 @@ class _CreateEditProfilePageState extends State<CreateEditProfilePage>
     'Personal Info',
     'Education/Career',
     'Family',
+    'Photo Uploads',
+  ];
+
+  /*
+  final List<String> _tabs = const [
+    'Personal Info',
+    'Education/Career',
+    'Family',
     'Preferences',
     'Photo Uploads',
   ];
+  */
 
   // Create controllers for the form fields
   final _nameController = TextEditingController();
@@ -358,7 +367,7 @@ class _CreateEditProfilePageState extends State<CreateEditProfilePage>
                       SingleChildScrollView(child: _buildPersonalInfoForm()),
                       SingleChildScrollView(child: _buildEducationCareerForm()),
                       SingleChildScrollView(child: _buildFamilyForm()),
-                      SingleChildScrollView(child: _buildPreferencesForm()),
+                      //SingleChildScrollView(child: _buildPreferencesForm()),
                       SingleChildScrollView(child: _buildPhotoUploadsForm()),
                     ],
                   ),
@@ -1187,14 +1196,14 @@ class _CreateEditProfilePageState extends State<CreateEditProfilePage>
               ),
               elevation: 2,
             ),
-            child: const Text('Next: Preferences'),
+            child: const Text('Next to Complete'),
           ),
         ],
       ),
     ],
   );
-  Widget _buildPreferencesForm() =>
-      const Center(child: Text("Preferences form goes here"));
+  //Widget _buildPreferencesForm() =>
+  //    const Center(child: Text("Preferences form goes here"));
 
   Widget _buildInputField({
     required String label,

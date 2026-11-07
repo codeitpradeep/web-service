@@ -26,12 +26,13 @@ class _UserDashboardPageState extends State<UserDashboardPage>
   bool _isMatchesLoading = true; // Separate loading state for matches
   String? _errorMessage; // New variable to store error messages
   bool _shouldRedirectToLogin = false; // New state variable for redirection
-  final List<String> _tabs = const [
+  final List<String> _tabs = const ['My Profile/Matches'];
+  /* final List<String> _tabs = const [
     'My Profile/Matches',
     'Interests Sent/Received',
     'Messages',
     'Privacy Settings',
-  ];
+  ];*/
 
   @override
   void initState() {
@@ -91,7 +92,8 @@ class _UserDashboardPageState extends State<UserDashboardPage>
         }
 
         String profilePictureUrl =
-            data['profile_picture'] ?? 'https://picsum.photos/150';
+            data['profile_picture'] ??
+            'https://dummyimage.com/150x150/B01B5B/B01B5B.png';
 
         final newProfile = Profile(
           id: data['id'],
@@ -184,7 +186,8 @@ class _UserDashboardPageState extends State<UserDashboardPage>
           }
         }
         String profilePictureUrl =
-            data['profile_picture'] ?? 'https://picsum.photos/150';
+            data['profile_picture'] ??
+            'https://dummyimage.com/150x150/B01B5B/B01B5B.png';
 
         return Profile(
           id: data['id'], // Important for navigation
@@ -540,7 +543,9 @@ class _UserDashboardPageState extends State<UserDashboardPage>
               crossAxisCount: isMobile ? 2 : 3,
               crossAxisSpacing: 16,
               mainAxisSpacing: 16,
-              childAspectRatio: isMobile ? 0.85 : 1.3, // Adjusted height: Taller for mobile (narrower width), shorter for desktop
+              childAspectRatio: isMobile
+                  ? 0.85
+                  : 1.3, // Adjusted height: Taller for mobile (narrower width), shorter for desktop
             ),
             itemCount: _matches.length,
             itemBuilder: (context, index) {
@@ -698,20 +703,18 @@ class _UserDashboardPageState extends State<UserDashboardPage>
                                 'pending_approval') {
                               showDialog(
                                 context: context,
-                                builder:
-                                    (context) => AlertDialog(
-                                      title: const Text('Approval Pending'),
-                                      content: const Text(
-                                        'Waiting for the approval and upload Jathagam pdf',
-                                      ),
-                                      actions: [
-                                        TextButton(
-                                          onPressed:
-                                              () => Navigator.pop(context),
-                                          child: const Text('OK'),
-                                        ),
-                                      ],
+                                builder: (context) => AlertDialog(
+                                  title: const Text('Approval Pending'),
+                                  content: const Text(
+                                    'Waiting for the approval and upload Jathagam pdf',
+                                  ),
+                                  actions: [
+                                    TextButton(
+                                      onPressed: () => Navigator.pop(context),
+                                      child: const Text('OK'),
                                     ),
+                                  ],
+                                ),
                               );
                               return;
                             }
@@ -768,14 +771,14 @@ class _UserDashboardPageState extends State<UserDashboardPage>
             _buildInterestListItem(
               'Interest Received from Karthik M.',
               'Age: 29, Height: 5\'9\", Hindu, Tamil, Architect',
-              "https://picsum.photos/400/600?random=4",
+              "https://dummyimage.com/150x150/B01B5B/B01B5B.png",
               isMobile,
             ),
             const SizedBox(height: 16),
             _buildInterestListItem(
               'Interest Sent to Meena L.',
               'Age: 27, Height: 5\'5\", Hindu, Tamil, Teacher',
-              "https://picsum.photos/400/600?random=5",
+              "https://dummyimage.com/150x150/B01B5B/B01B5B.png",
               isMobile,
             ),
           ],

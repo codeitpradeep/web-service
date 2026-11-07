@@ -117,8 +117,9 @@ class Profile {
     this.familyValues,
     this.horoscopeUrl,
     this.approvalStatus,
-  }) : photos = photos ?? ['https://picsum.photos/150'],
-       profilePicture = profilePicture ?? 'https://picsum.photos/150';
+  }) : photos = photos ?? ['https://dummyimage.com/150x150/B01B5B/B01B5B.png'],
+       profilePicture =
+           profilePicture ?? 'https://dummyimage.com/150x150/B01B5B/B01B5B.png';
 }
 
 final List<Profile> featuredProfiles = [
@@ -179,7 +180,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       navigatorKey: navigatorKey,
-      title: 'Tamil Matrimony',
+      title: 'TiruppurKulalarMatrimony',
       localizationsDelegates: const [
         AppLocalizations.delegate,
         GlobalMaterialLocalizations.delegate,
