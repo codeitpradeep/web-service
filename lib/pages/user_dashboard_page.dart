@@ -657,14 +657,14 @@ class _UserDashboardPageState extends State<UserDashboardPage>
                                 Text(
                                   'Match Score: $matchScore',
                                   style: AppTextStyles.cardTitle.copyWith(
-                                    fontSize: 18,
+                                    fontSize: 16,
                                     color: AppColors.primary500,
                                   ),
                                 ),
                               Text(
                                 profile.name,
                                 style: AppTextStyles.cardTitle.copyWith(
-                                  fontSize: 16,
+                                  fontSize: 12,
                                 ),
                                 maxLines: 1,
                                 overflow: TextOverflow.ellipsis,
@@ -676,10 +676,10 @@ class _UserDashboardPageState extends State<UserDashboardPage>
                                   fontSize: 12,
                                 ),
                               ),
-                              Text(
+                              /*Text(
                                 '${profile.city ?? 'N/A'}',
                                 style: AppTextStyles.cardSubtitle.copyWith(
-                                  fontSize: 12,
+                                  fontSize: 10,
                                 ),
                               ),
                               Text(
@@ -687,7 +687,7 @@ class _UserDashboardPageState extends State<UserDashboardPage>
                                 style: AppTextStyles.cardSubtitle.copyWith(
                                   fontSize: 12,
                                 ),
-                              ),
+                              ),*/
                             ],
                           ),
                         ),

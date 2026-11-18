@@ -328,7 +328,8 @@ class _ProfileViewPageState extends State<ProfileViewPage>
 
   Widget _buildBasicDetails() {
     return _buildDetailSection(
-      title: 'About ${widget.profile.name} - ${widget.profile.mobileNumber}',
+      title:
+          'About ${widget.profile.name}${widget.profile.mobileNumber != null ? ' - ${widget.profile.mobileNumber}' : ''}',
       content: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [

@@ -71,16 +71,20 @@ class AppHeader extends StatelessWidget implements PreferredSizeWidget {
               ),
             ),
             Expanded(
-              child: Text(
-                titleText,
-                style: AppTextStyles.navLink.copyWith(
-                  fontSize: 20,
-                  fontWeight: FontWeight.bold,
+              child: FittedBox(
+                fit: BoxFit.scaleDown,
+                alignment: Alignment.centerLeft,
+                child: Text(
+                  titleText,
+                  maxLines: 1,
+                  style: AppTextStyles.navLink.copyWith(
+                    fontSize: ResponsiveLayout.isMobile(context) ? 16 : 20,
+                    fontWeight: FontWeight.bold,
+                  ),
                 ),
-                overflow: TextOverflow.ellipsis,
               ),
             ),
-            const Spacer(),
+            if (ResponsiveLayout.isDesktop(context)) const Spacer(),
             if (ResponsiveLayout.isDesktop(context)) ...[
               Row(
                 children: finalNavLinks.map((link) {
