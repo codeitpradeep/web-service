@@ -437,76 +437,86 @@ class _UserDashboardPageState extends State<UserDashboardPage>
                     ),
                   ),
                 ),
-                if (profile.horoscopeUrl != null) ...[
+                if (profile.horoscopeUrls.isNotEmpty) ...[
                   const SizedBox(height: 16),
-                  SizedBox(
-                    width: double.infinity,
-                    child: OutlinedButton.icon(
-                      onPressed: () async {
-                        final url = profile.horoscopeUrl!;
-                        print('Debug: Downloading Horoscope URL: $url');
+                  ...profile.horoscopeUrls.asMap().entries.map((entry) {
+                    final index = entry.key;
+                    final url = entry.value;
+                    final path = Uri.tryParse(url)?.path.toLowerCase() ?? '';
+                    final extension = path.split('.').last;
+                    final isPdf = extension == 'pdf' || extension == 'txt';
+                    final contentType = isPdf
+                        ? 'application/pdf'
+                        : switch (extension) {
+                            'png' => 'image/png',
+                            'webp' => 'image/webp',
+                            'gif' => 'image/gif',
+                            'jpg' || 'jpeg' => 'image/jpeg',
+                            _ => 'application/octet-stream',
+                          };
+                    final fileName = extension == 'txt'
+                        ? 'horoscope_${index + 1}.pdf'
+                        : 'horoscope_${index + 1}.$extension';
 
-                        try {
-                          // Fetch the file content
-                          final response = await http.get(Uri.parse(url));
-
-                          if (response.statusCode == 200) {
-                            // Create a blob from the bytes
-                            // Force type to application/pdf regardless of extension
-                            final blob = html.Blob([
-                              response.bodyBytes,
-                            ], 'application/pdf');
-                            final blobUrl = html.Url.createObjectUrlFromBlob(
-                              blob,
-                            );
-
-                            // Create a temporary anchor element to trigger download
-                            // Ensure we save it as .pdf
-                            final anchor = html.AnchorElement(href: blobUrl)
-                              ..setAttribute("download", "horoscope.pdf")
-                              ..click();
-
-                            // Cleanup
-                            html.Url.revokeObjectUrl(blobUrl);
-                          } else {
-                            throw Exception(
-                              'Failed to download file: ${response.statusCode}',
-                            );
-                          }
-                        } catch (e) {
-                          print('Download error: $e');
-                          ScaffoldMessenger.of(context).showSnackBar(
-                            SnackBar(
-                              content: Text('Download failed: $e'),
-                              backgroundColor: Colors.red,
+                    return Padding(
+                      padding: const EdgeInsets.only(bottom: 8),
+                      child: SizedBox(
+                        width: double.infinity,
+                        child: OutlinedButton.icon(
+                          onPressed: () async {
+                            try {
+                              final response = await http.get(Uri.parse(url));
+                              if (response.statusCode == 200) {
+                                final blob = html.Blob([
+                                  response.bodyBytes,
+                                ], contentType);
+                                final blobUrl =
+                                    html.Url.createObjectUrlFromBlob(blob);
+                                html.AnchorElement(href: blobUrl)
+                                  ..setAttribute('download', fileName)
+                                  ..click();
+                                html.Url.revokeObjectUrl(blobUrl);
+                              } else {
+                                throw Exception(
+                                  'Failed to download file: ${response.statusCode}',
+                                );
+                              }
+                            } catch (e) {
+                              if (!mounted) return;
+                              ScaffoldMessenger.of(context).showSnackBar(
+                                SnackBar(
+                                  content: Text('Download failed: $e'),
+                                  backgroundColor: Colors.red,
+                                ),
+                              );
+                            }
+                          },
+                          icon: const Icon(
+                            Icons.download,
+                            size: 16,
+                            color: AppColors.primary500,
+                          ),
+                          label: Text(
+                            'Download Horoscope ${index + 1}',
+                            style: AppTextStyles.buttonText.copyWith(
+                              fontSize: 14,
+                              color: AppColors.primary500,
                             ),
-                          );
-                        }
-                      },
-                      icon: const Icon(
-                        Icons.download,
-                        size: 16,
-                        color: AppColors.primary500,
-                      ),
-                      label: Text(
-                        'Download Horoscope',
-                        style: AppTextStyles.buttonText.copyWith(
-                          fontSize: 14,
-                          color: AppColors.primary500,
+                          ),
+                          style: OutlinedButton.styleFrom(
+                            side: const BorderSide(color: AppColors.primary500),
+                            padding: const EdgeInsets.symmetric(
+                              horizontal: 16,
+                              vertical: 12,
+                            ),
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(8),
+                            ),
+                          ),
                         ),
                       ),
-                      style: OutlinedButton.styleFrom(
-                        side: const BorderSide(color: AppColors.primary500),
-                        padding: const EdgeInsets.symmetric(
-                          horizontal: 16,
-                          vertical: 12,
-                        ),
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(8),
-                        ),
-                      ),
-                    ),
-                  ),
+                    );
+                  }),
                 ],
               ],
             ),

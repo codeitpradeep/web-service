@@ -341,95 +341,119 @@ class _ProfileViewPageState extends State<ProfileViewPage>
             ), // text-gray-600 leading-relaxed
           ),
           const SizedBox(height: 32),
-          if (widget.profile.horoscopeUrl != null) ...[
-            SizedBox(
-              width: double.infinity,
-              child: ElevatedButton.icon(
-                onPressed: () async {
-                  final user = Supabase.instance.client.auth.currentUser;
-                  if (user == null) return;
+          if (widget.profile.horoscopeUrls.isNotEmpty) ...[
+            ...widget.profile.horoscopeUrls.asMap().entries.map((entry) {
+              final index = entry.key;
+              final url = entry.value;
+              final path = Uri.tryParse(url)?.path.toLowerCase() ?? '';
+              final extension = path.split('.').last;
+              final isPdf = extension == 'pdf' || extension == 'txt';
+              final contentType = isPdf
+                  ? 'application/pdf'
+                  : switch (extension) {
+                      'png' => 'image/png',
+                      'webp' => 'image/webp',
+                      'gif' => 'image/gif',
+                      'jpg' || 'jpeg' => 'image/jpeg',
+                      _ => 'application/octet-stream',
+                    };
+              final fileName = extension == 'txt'
+                  ? 'horoscope_${index + 1}.pdf'
+                  : 'horoscope_${index + 1}.$extension';
 
-                  final sevenDaysAgo = DateTime.now()
-                      .subtract(const Duration(days: 7))
-                      .toIso8601String();
+              return Padding(
+                padding: const EdgeInsets.only(bottom: 8),
+                child: SizedBox(
+                  width: double.infinity,
+                  child: ElevatedButton.icon(
+                    onPressed: () async {
+                      final user = Supabase.instance.client.auth.currentUser;
+                      if (user == null) return;
 
-                  try {
-                    // Check weekly download limit
-                    final downloads = await Supabase.instance.client
-                        .from('profile_downloads')
-                        .select('id')
-                        .eq('user_id', user.id)
-                        .gte('created_at', sevenDaysAgo);
+                      final sevenDaysAgo = DateTime.now()
+                          .subtract(const Duration(days: 7))
+                          .toIso8601String();
 
-                    if (downloads.length >= 5) {
-                      if (context.mounted) {
-                        showDialog(
-                          context: context,
-                          builder: (context) => AlertDialog(
-                            title: const Text('Download Limit Reached'),
-                            content: const Text(
-                              'You have reached your weekly limit of 5 downloads.',
-                            ),
-                            actions: [
-                              TextButton(
-                                onPressed: () => Navigator.pop(context),
-                                child: const Text('OK'),
+                      try {
+                        // Check weekly download limit
+                        final downloads = await Supabase.instance.client
+                            .from('profile_downloads')
+                            .select('id')
+                            .eq('user_id', user.id)
+                            .gte('created_at', sevenDaysAgo);
+
+                        if (downloads.length >= 10) {
+                          if (context.mounted) {
+                            showDialog(
+                              context: context,
+                              builder: (context) => AlertDialog(
+                                title: const Text('Download Limit Reached'),
+                                content: const Text(
+                                  'You have reached your weekly limit of 10 downloads.',
+                                ),
+                                actions: [
+                                  TextButton(
+                                    onPressed: () => Navigator.pop(context),
+                                    child: const Text('OK'),
+                                  ),
+                                ],
                               ),
-                            ],
-                          ),
-                        );
+                            );
+                          }
+                          return;
+                        }
+
+                        final response = await http.get(Uri.parse(url));
+                        if (response.statusCode == 200) {
+                          final blob = html.Blob([
+                            response.bodyBytes,
+                          ], contentType);
+                          final blobUrl = html.Url.createObjectUrlFromBlob(
+                            blob,
+                          );
+                          html.AnchorElement(href: blobUrl)
+                            ..setAttribute('download', fileName)
+                            ..click();
+                          html.Url.revokeObjectUrl(blobUrl);
+
+                          // Log the download
+                          await Supabase.instance.client
+                              .from('profile_downloads')
+                              .insert({
+                                'user_id': user.id,
+                                'profile_id': widget.profile.id,
+                                'download_type': 'horoscope',
+                              });
+                        } else {
+                          throw Exception(
+                            'Failed to download file: ${response.statusCode}',
+                          );
+                        }
+                      } catch (e) {
+                        if (context.mounted) {
+                          ScaffoldMessenger.of(context).showSnackBar(
+                            SnackBar(
+                              content: Text('Download failed: $e'),
+                              backgroundColor: Colors.red,
+                            ),
+                          );
+                        }
                       }
-                      return;
-                    }
-
-                    final url = widget.profile.horoscopeUrl!;
-                    final response = await http.get(Uri.parse(url));
-                    if (response.statusCode == 200) {
-                      final blob = html.Blob([
-                        response.bodyBytes,
-                      ], 'application/pdf');
-                      final blobUrl = html.Url.createObjectUrlFromBlob(blob);
-                      final anchor = html.AnchorElement(href: blobUrl)
-                        ..setAttribute("download", "horoscope.pdf")
-                        ..click();
-                      html.Url.revokeObjectUrl(blobUrl);
-
-                      // Log the download
-                      await Supabase.instance.client
-                          .from('profile_downloads')
-                          .insert({
-                            'user_id': user.id,
-                            'profile_id': widget.profile.id,
-                            'download_type': 'horoscope',
-                          });
-                    } else {
-                      throw Exception(
-                        'Failed to download file: ${response.statusCode}',
-                      );
-                    }
-                  } catch (e) {
-                    if (context.mounted) {
-                      ScaffoldMessenger.of(context).showSnackBar(
-                        SnackBar(
-                          content: Text('Download failed: $e'),
-                          backgroundColor: Colors.red,
-                        ),
-                      );
-                    }
-                  }
-                },
-                icon: const Icon(Icons.download),
-                label: const Text('Download Horoscope'),
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: AppColors.primary500,
-                  foregroundColor: Colors.white,
-                  padding: const EdgeInsets.symmetric(vertical: 12),
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(8),
+                    },
+                    icon: const Icon(Icons.download),
+                    label: Text('Download Horoscope ${index + 1}'),
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: AppColors.primary500,
+                      foregroundColor: Colors.white,
+                      padding: const EdgeInsets.symmetric(vertical: 12),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(8),
+                      ),
+                    ),
                   ),
                 ),
-              ),
-            ),
+              );
+            }),
             const SizedBox(height: 32),
           ],
           Text(

@@ -1,3 +1,5 @@
+import 'dart:convert';
+
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:my_web_project/data/locations.dart';
@@ -71,7 +73,7 @@ class _CreateEditProfilePageState extends State<CreateEditProfilePage>
 
   // Uploads
   String? _uploadedProfilePictureUrl;
-  String? _uploadedHoroscopeUrl;
+  final List<String> _uploadedHoroscopeUrls = [];
   bool _isUploading = false;
 
   @override
@@ -132,7 +134,7 @@ class _CreateEditProfilePageState extends State<CreateEditProfilePage>
       _selectedAnnualIncome = profile.annualIncome;
       _selectedFamilyValues = profile.familyValues;
       _uploadedProfilePictureUrl = profile.profilePicture;
-      _uploadedHoroscopeUrl = profile.horoscopeUrl;
+      _uploadedHoroscopeUrls.addAll(profile.horoscopeUrls.take(2));
     }
   }
 
@@ -259,7 +261,11 @@ class _CreateEditProfilePageState extends State<CreateEditProfilePage>
             'family_values': _selectedFamilyValues,
             // 'approval_status': 'pending_approval', // Prevent resetting status to pending on edit
             'profile_picture': _uploadedProfilePictureUrl,
-            'horoscope_url': _uploadedHoroscopeUrl,
+            'horoscope_url': _uploadedHoroscopeUrls.isEmpty
+                ? null
+                : _uploadedHoroscopeUrls.length == 1
+                ? _uploadedHoroscopeUrls.first
+                : jsonEncode(_uploadedHoroscopeUrls),
           })
           .eq('id', profileIdToUpdate);
 
@@ -989,72 +995,107 @@ class _CreateEditProfilePageState extends State<CreateEditProfilePage>
         ),
         const SizedBox(height: 32),
         Text(
-          'Upload Horoscope / Dosham (PDF)',
+          'Upload Horoscope (up to 2 files)',
           style: AppTextStyles.sectionTitle.copyWith(fontSize: 18),
         ),
         const SizedBox(height: 16),
-        Container(
-          padding: const EdgeInsets.all(16),
-          decoration: BoxDecoration(
-            border: Border.all(color: AppColors.secondary200),
-            borderRadius: BorderRadius.circular(8),
-          ),
-          child: Row(
-            children: [
-              const Icon(Icons.picture_as_pdf, color: Colors.red, size: 32),
-              const SizedBox(width: 16),
-              Expanded(
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
-                      _uploadedHoroscopeUrl != null
-                          ? 'Horoscope Uploaded'
-                          : 'No Horoscope Uploaded',
+        Text(
+          'Upload horoscope images or PDFs. Existing PDF uploads remain supported.',
+          style: AppTextStyles.bodyText.copyWith(color: AppColors.secondary700),
+        ),
+        const SizedBox(height: 16),
+        ...List.generate(2, (index) {
+          final url = index < _uploadedHoroscopeUrls.length
+              ? _uploadedHoroscopeUrls[index]
+              : null;
+          final isPdf =
+              url != null &&
+              (Uri.tryParse(url)?.path.toLowerCase().endsWith('.pdf') == true ||
+                  Uri.tryParse(url)?.path.toLowerCase().endsWith('_pdf.txt') ==
+                      true);
+
+          return Padding(
+            padding: const EdgeInsets.only(bottom: 12),
+            child: Container(
+              padding: const EdgeInsets.all(16),
+              decoration: BoxDecoration(
+                border: Border.all(color: AppColors.secondary200),
+                borderRadius: BorderRadius.circular(8),
+              ),
+              child: Row(
+                children: [
+                  if (url == null || isPdf)
+                    Icon(
+                      isPdf ? Icons.picture_as_pdf : Icons.image_outlined,
+                      color: isPdf ? Colors.red : AppColors.secondary700,
+                      size: 40,
+                    )
+                  else
+                    Image.network(
+                      url,
+                      width: 56,
+                      height: 72,
+                      fit: BoxFit.cover,
+                      errorBuilder: (context, error, stackTrace) =>
+                          const Icon(Icons.broken_image_outlined, size: 40),
+                    ),
+                  const SizedBox(width: 16),
+                  Expanded(
+                    child: Text(
+                      url == null
+                          ? 'Horoscope image ${index + 1} not uploaded'
+                          : 'Horoscope file ${index + 1} uploaded',
                       style: AppTextStyles.bodyText.copyWith(
                         fontWeight: FontWeight.bold,
                       ),
                     ),
-                    if (_uploadedHoroscopeUrl != null)
-                      Text(
-                        'File available',
-                        style: AppTextStyles.bodyText.copyWith(
-                          fontSize: 12,
-                          color: Colors.green,
-                        ),
-                      ),
-                  ],
-                ),
+                  ),
+                  if (url != null)
+                    IconButton(
+                      tooltip: 'Remove file',
+                      onPressed: _isUploading
+                          ? null
+                          : () => setState(
+                              () => _uploadedHoroscopeUrls.removeAt(index),
+                            ),
+                      icon: const Icon(Icons.close),
+                    ),
+                  ElevatedButton(
+                    onPressed: _isUploading
+                        ? null
+                        : () async {
+                            setState(() => _isUploading = true);
+                            final uploadedUrl = await CloudinaryService()
+                                .pickAndUploadFile(
+                                  fileType: FileType.custom,
+                                  allowedExtensions: [
+                                    'jpg',
+                                    'jpeg',
+                                    'png',
+                                    'webp',
+                                    'gif',
+                                    'pdf',
+                                  ],
+                                );
+                            if (!mounted) return;
+                            setState(() {
+                              _isUploading = false;
+                              if (uploadedUrl != null) {
+                                if (index < _uploadedHoroscopeUrls.length) {
+                                  _uploadedHoroscopeUrls[index] = uploadedUrl;
+                                } else {
+                                  _uploadedHoroscopeUrls.add(uploadedUrl);
+                                }
+                              }
+                            });
+                          },
+                    child: Text(url == null ? 'Upload' : 'Change'),
+                  ),
+                ],
               ),
-              ElevatedButton(
-                onPressed: _isUploading
-                    ? null
-                    : () async {
-                        setState(() => _isUploading = true);
-                        final url = await CloudinaryService().pickAndUploadFile(
-                          fileType: FileType.custom,
-                          allowedExtensions: ['pdf'], // Only allow PDF
-                        );
-                        setState(() {
-                          _isUploading = false;
-                          if (url != null) {
-                            _uploadedHoroscopeUrl = url;
-                            ScaffoldMessenger.of(context).showSnackBar(
-                              SnackBar(
-                                content: Text('Uploaded: $url'),
-                                duration: const Duration(seconds: 5),
-                              ),
-                            );
-                          }
-                        });
-                      },
-                child: Text(
-                  _uploadedHoroscopeUrl != null ? 'Change' : 'Upload',
-                ),
-              ),
-            ],
-          ),
-        ),
+            ),
+          );
+        }),
         const SizedBox(height: 32),
         Row(
           mainAxisAlignment: MainAxisAlignment.end,

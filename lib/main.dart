@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:my_web_project/app_shell.dart';
 import 'package:my_web_project/theme.dart';
@@ -120,6 +121,25 @@ class Profile {
   }) : photos = photos ?? ['https://dummyimage.com/150x150/B01B5B/B01B5B.png'],
        profilePicture =
            profilePicture ?? 'https://dummyimage.com/150x150/B01B5B/B01B5B.png';
+
+  List<String> get horoscopeUrls {
+    final value = horoscopeUrl;
+    if (value == null || value.isEmpty) return const [];
+
+    try {
+      final decoded = jsonDecode(value);
+      if (decoded is List) {
+        return decoded
+            .whereType<String>()
+            .where((url) => url.isNotEmpty)
+            .toList();
+      }
+    } on FormatException {
+      // Existing profiles store a single URL rather than a JSON list.
+    }
+
+    return [value];
+  }
 }
 
 final List<Profile> featuredProfiles = [
